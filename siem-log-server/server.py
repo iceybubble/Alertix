@@ -34,17 +34,60 @@ logger = logging.getLogger(__name__)
 
 # Keyword categories
 CATEGORIES = {
-    "Entertainment": ["netflix", "youtube", "spotify", "primevideo", "hulu", "jiohotstar", "Appletv"],
-    "Social Media": ["facebook", "twitter", "instagram", "tiktok", "snapchat", "Reddit", "WeChat", "Threads", "Discord"],
-    "News": ["cnn", "bbc", "nytimes", "reuters", "news"],
-    "Work": ["slack", "github", "gitlab", "zoom", "microsoft teams", "Dropbox", "Google Calendar"],
-    "Education": ["khanacademy", "coursera", "edx", "udemy", "academia"],
-    "Shopping": ["amazon", "ebay", "flipkart", "etsy", "walmart", "Myntra", "Nykaa", "Alibaba", "Urbanic", "Ajio"],
-    "Gaming": ["twitch", "steam", "epicgames", "roblox", "riotgames", "Xbox", "Polygon"],
-    "Finance": ["paypal", "bank", "finance", "trading", "investment", "CNBC", "Forbes", "Bajaj Finance"],
-    "Adult": ["porn", "xxx", "sex", "adult", "nsfw"],
+    "Entertainment": [
+        "netflix", "youtube", "spotify", "primevideo", "hulu", "jiohotstar", "appletv", "disneyplus", "spotify", "deezer", "pandora",
+        "soundcloud", "vevo", "vimeo", "peacock", "starz", "crunchyroll", "bbc iplayer"
+    ],
+    "Social Media": [
+        "facebook", "twitter", "instagram", "tiktok", "snapchat", "reddit", "wechat", "threads", "discord", "linkedin", "pinterest",
+        "tumblr", "quora", "clubhouse", "telegram", "signal", "messenger", "line", "kakao", "viber", "wechat"
+    ],
+    "News": [
+        "cnn", "bbc", "nytimes", "reuters", "news", "aljazeera", "foxnews", "theguardian", "washingtonpost", "buzzfeed", "npr",
+        "huffpost", "cnbc", "forbes", "economist", "dw", "thehill"
+    ],
+    "Work": [
+        "slack", "github", "gitlab", "zoom", "microsoft teams", "dropbox", "google calendar", "asana", "jira", "trello", "notion",
+        "office365", "skype", "basecamp", "monday", "zapier", "confluence"
+    ],
+    "Education": [
+        "khanacademy", "coursera", "edx", "udemy", "academia", "linkedin learning", "codecademy", "udacity", "pluralsight",
+        "brilliant", "futurelearn", "skillshare", "sololearn", "mit ocw", "harvard online", "stanford online"
+    ],
+    "Shopping": [
+        "amazon", "ebay", "flipkart", "etsy", "walmart", "myntra", "nykaa", "alibaba", "urbanic", "ajio", "target", "bestbuy",
+        "shopify", "costco", "aldi", "asos", "zara", "sephora", "luxurybrands"
+    ],
+    "Gaming": [
+        "twitch", "steam", "epicgames", "roblox", "riotgames", "xbox", "polygon", "origin", "gog", "battle.net", "playstation network",
+        "nintendo", "garena", "miniclip", "kongregate", "newgrounds", "itch.io"
+    ],
+    "Finance": [
+        "paypal", "bank", "finance", "trading", "investment", "cnbc", "forbes", "bajaj finance", "vanguard", "fidelity", "robinhood",
+        "coinbase", "blockchain", "mint", "etrade", "td ameritrade", "schwab", "square", "stripe", "intuit"
+    ],
+    "Adult": [
+        "porn", "xxx", "sex", "adult", "nsfw", "brazzers", "xvideos", "redtube", "pornhub", "onlyfans", "chaturbate"
+    ],
+    "Coding": [
+        "leetcode", "hackerrank", "codeforces", "codechef", "atcoder", "topcoder", "geeksforgeeks", "codingninjas", "interviewbit",
+        "hackerone", "exercism", "spoj", "projecteuler", "coderbyte", "edabit", "kaggle", "github", "gitlab", "bitbucket"
+    ],
+    "Health & Fitness": [
+        "myfitnesspal", "fitbit", "strava", "nike training club", "headspace", "calm", "peloton", "mapmyrun", "sleep cycle"
+    ],
+    "Travel": [
+        "airbnb", "booking", "expedia", "tripadvisor", "uber", "lyft", "skyscanner", "kayak", "trivago", "hotels.com"
+    ],
+    "Food & Drink": [
+        "ubereats", "doordash", "zomato", "grubhub", "swiggy", "foodpanda", "yelp", "opentable"
+    ],
+    "Utilities": [
+        "google drive", "dropbox", "onedrive", "lastpass", "1password", "evernote", "notion", "todoist", "calendar", "weather"
+    ],
     "Other": []
 }
+
 
 # Malware detection keywords
 MALWARE_KEYWORDS = {
