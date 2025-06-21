@@ -1,1 +1,2 @@
-.env
+.envsiem-log-server/.env
+siem-log-server/venv/
