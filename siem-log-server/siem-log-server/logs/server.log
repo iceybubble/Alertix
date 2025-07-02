@@ -1,0 +1,630 @@
+level: INFO
+time: 2025-05-27 09:58:46,278
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 09:58:53,145
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 09:58:53,452
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 09:58:57,977
+log: Tab updated: https://www.amazon.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+
+level: INFO
+time: 2025-05-27 09:58:59,206
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 09:59:04,660
+log: Tab updated: https://x.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 09:59:04,897
+log: Tab updated: https://x.com/home
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 09:59:06,929
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 09:59:12,282
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 09:59:14,644
+log: Tab updated: https://www.google.com/search?q=instagram&oq=instagram&gs_lcrp=EgZjaHJvbWUqDwgAEEUYOxiDARixAxiABDIPCAAQRRg7GIMBGLEDGIAEMg0IARAAGIMBGLEDGIAEMgYIAhBFGEAyDQgDEAAYgwEYsQMYgAQyCggEEAAYsQMYgAQyCggFEAAYsQMYgAQyCggGEAAYsQMYgAQyBggHEAUYQNIBCDI3MTZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+
+level: INFO
+time: 2025-05-27 09:59:15,771
+log: Tab updated: https://coursera.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Education
+
+level: INFO
+time: 2025-05-27 09:59:17,921
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 09:59:22,415
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 09:59:23,290
+log: Tab updated: https://www.google.com/search?q=epicgames&oq=epicgame&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgkIARAAGAoYgAQyBggCEEUYOTIJCAMQABgKGIAEMgkIBBAAGAoYgAQyCQgFEAAYChiABDIHCAYQABiABDIJCAcQABgKGIAEMgkICBAAGAoYgAQyCQgJEAAYChiABNIBCDI0MDdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Gaming
+
+level: INFO
+time: 2025-05-27 09:59:26,327
+log: Tab updated: https://github.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-27 09:59:27,095
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 09:59:31,486
+log: Tab updated: https://www.google.com/search?q=zoom&oq=zoom&gs_lcrp=EgZjaHJvbWUqDwgAEEUYOxiDARixAxiABDIPCAAQRRg7GIMBGLEDGIAEMg0IARAAGIMBGLEDGIAEMg0IAhAAGIMBGLEDGIAEMgoIAxAAGLEDGIAEMhMIBBAuGIMBGMcBGLEDGNEDGIAEMg0IBRAAGIMBGLEDGIAEMhAIBhAuGMcBGLEDGNEDGIAEMgcIBxAAGIAEMg0ICBAAGIMBGLEDGIAEMgcICRAAGI8C0gEIMTEyMGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-27 10:04:33,205
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:04:41,284
+log: Tab updated: https://www.google.com/search?gs_ssp=eJzj4tLP1TewTM_KyzFSYDRgdGDw4snOSMxTSExOTEnNrQQAe3IIpA&q=khan+academy&oq=khanacae&gs_lcrp=EgZjaHJvbWUqFQgBEC4YChiDARjHARixAxjRAxiABDIGCAAQRRg5MhUIARAuGAoYgwEYxwEYsQMY0QMYgAQyDwgCEAAYChiDARixAxiABDIPCAMQABgKGIMBGLEDGIAEMgkIBBAAGAoYgAQyDAgFEAAYChixAxiABDIPCAYQABgKGIMBGLEDGIAEMgkIBxAAGAoYgAQyCQgIEAAYChiABNIBCDU0MzNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Adult
+
+level: INFO
+time: 2025-05-27 10:04:43,191
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:04:46,332
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:04:49,097
+log: Tab updated: https://www.google.com/search?q=ebay&oq=ebay&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyEwgBEC4YgwEYxwEYsQMY0QMYgAQyDQgCEAAYgwEYsQMYgAQyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyCggGEAAYsQMYgAQyBggHEAUYQNIBCDEwNDVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+
+level: INFO
+time: 2025-05-27 10:04:54,114
+log: Tab updated: https://www.google.com/search?q=roblox&oq=roblox&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyDQgBEC4YgwEYsQMYgAQyDQgCEAAYgwEYsQMYgAQyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyCggFEAAYsQMYgAQyCggGEAAYsQMYgAQyBggHEAUYQNIBCDM1NDZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Gaming
+
+level: INFO
+time: 2025-05-27 10:12:15,695
+log: Tab updated: http://127.0.0.1:5000/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:12:35,937
+log: Tab updated: http://127.0.0.1:5000/logs/recent
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:12:36,194
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:12:36,375
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:12:49,416
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:12:51,692
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:12:53,436
+log: Tab updated: https://www.amazon.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+
+level: INFO
+time: 2025-05-27 10:13:06,393
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:13:09,924
+log: Tab updated: https://www.google.com/search?q=khan+academy&oq=khan&gs_lcrp=EgZjaHJvbWUqEAgAEAAYgwEY4wIYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyEwgBEC4YgwEYxwEYsQMY0QMYgAQyCggCEC4Y1AIYgAQyDQgDEAAYgwEYsQMYgAQyDQgEEC4YgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyBwgGEAAYgAQyBwgHEC4YgAQyEAgIEAAYgwEYsQMYgAQYigXSAQgyNjM4ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:13:13,259
+log: Tab updated: https://www.google.com/search?q=instagram&oq=instagram&gs_lcrp=EgZjaHJvbWUqDwgAEEUYOxiDARixAxiABDIPCAAQRRg7GIMBGLEDGIAEMg0IARAAGIMBGLEDGIAEMgYIAhBFGEAyDQgDEAAYgwEYsQMYgAQyCggEEAAYsQMYgAQyCggFEAAYsQMYgAQyCggGEAAYsQMYgAQyBggHEAUYQNIBCDMyOTZqMGo3qAIIsAIB8QXcV8VQn4NaxA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+
+level: INFO
+time: 2025-05-27 10:13:14,157
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:13:15,781
+log: Tab updated: https://x.com/home
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:13:18,996
+log: Tab updated: https://coursera.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Education
+
+level: INFO
+time: 2025-05-27 10:13:19,654
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:13:23,084
+log: Tab updated: https://www.google.com/search?q=flipkart&oq=flipkart&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyEwgBEC4YgwEYxwEYsQMY0QMYgAQyBggCEEUYQDINCAMQABiDARixAxiABDINCAQQABiDARixAxiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDI1OTNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+
+level: INFO
+time: 2025-05-27 10:13:24,136
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:13:31,741
+log: Tab updated: https://www.flipkart.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+
+level: INFO
+time: 2025-05-27 10:13:42,392
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:13:43,096
+log: Tab updated: https://www.google.com/search?q=ebay&oq=ebay&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyEwgBEC4YgwEYxwEYsQMY0QMYgAQyDQgCEAAYgwEYsQMYgAQyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyCggGEAAYsQMYgAQyBggHEAUYQNIBCDE0NjNqMGo3qAIIsAIB8QWnfEInlTwynvEFp3xCJ5U8Mp4&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+
+level: INFO
+time: 2025-05-27 10:13:48,156
+log: Tab updated: https://www.google.com/search?q=instagram&oq=instagram&gs_lcrp=EgZjaHJvbWUqDwgAEEUYOxiDARixAxiABDIPCAAQRRg7GIMBGLEDGIAEMg0IARAAGIMBGLEDGIAEMgYIAhBFGEAyDQgDEAAYgwEYsQMYgAQyCggEEAAYsQMYgAQyCggFEAAYsQMYgAQyCggGEAAYsQMYgAQyBggHEAUYQNIBCDI4NThqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+
+level: INFO
+time: 2025-05-27 10:13:48,419
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:14:03,069
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:14:09,596
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:14:11,511
+log: Tab updated: https://www.google.com/search?q=slack&oq=slack&gs_lcrp=EgZjaHJvbWUyDwgAEEUYORiDARixAxiABDINCAEQABiDARixAxiABDINCAIQABiDARixAxiABDIKCAMQABixAxiABDIKCAQQABixAxiABDIHCAUQABiABDIKCAYQABixAxiABDIKCAcQABixAxiABDIHCAgQABiABDIHCAkQABiABNIBCDIzMDNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-27 10:14:13,297
+log: Tab updated: https://github.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-27 10:14:13,553
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:14:18,274
+log: Tab updated: https://www.google.com/search?q=news&oq=news&gs_lcrp=EgZjaHJvbWUyEggAEEUYORiDARixAxjJAxiABDINCAEQABiDARixAxiABDINCAIQABiSAxiABBiKBTIKCAMQABiSAxiABDINCAQQABiDARixAxiABDINCAUQABiDARixAxiABDIKCAYQABixAxiABDIKCAcQABixAxiABDINCAgQABiDARixAxiABDIHCAkQABiPAtIBCDE5NjNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: News
+
+level: INFO
+time: 2025-05-27 10:20:54,150
+log: Tab updated: http://127.0.0.1:5000/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:21:17,779
+log: Test log for youtube.com
+ip: 127.0.0.1
+user_agent: curl/8.10.1
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:21:38,917
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:21:46,923
+log: Tab updated: https://www.google.com/search?q=tiktok&oq=tiktok&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDIKCAEQABixAxiABDIKCAIQABixAxiABDINCAMQABiDARixAxiABDINCAQQABiDARixAxiABDIKCAUQABixAxiABDINCAYQABiDARixAxiABDIKCAcQABixAxiABDIQCAgQABiDARixAxiABBiKBTIHCAkQABiPAtIBCDMyMzdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+
+level: INFO
+time: 2025-05-27 10:21:48,735
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:21:56,899
+log: Tab updated: https://www.google.com/search?q=roblox&oq=roblox&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyDQgBEC4YgwEYsQMYgAQyDQgCEAAYgwEYsQMYgAQyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyCggFEAAYsQMYgAQyCggGEAAYsQMYgAQyBggHEAUYQNIBCDM2MTlqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Gaming
+
+level: INFO
+time: 2025-05-27 10:22:02,682
+log: Tab updated: https://www.google.com/search?q=epicgames&sca_esv=829c1e259cd14284&ei=6UQ1aLXmOrnC4-EPyoXFoAI&ved=0ahUKEwj1_quW7cKNAxU54TgGHcpCESQQ4dUDCBA&uact=5&oq=epicgames&gs_lp=Egxnd3Mtd2l6LXNlcnAiCWVwaWNnYW1lczIMEAAYgAQYQxiKBRgKMgcQABiABBgKMgcQABiABBgKMgcQABiABBgKMgcQABiABBgKMgcQABiABBgKMgsQABiABBixAxiDATIHEAAYgAQYCjIHEAAYgAQYCjIHEAAYgAQYCkjmJVC5DVicI3ACeAGQAQCYAeQBoAHeDKoBBTAuNy4yuAEDyAEA-AEBmAILoALwDagCFMICExAuGIAEGEMYtAIYigUY6gLYAQHCAhMQABiABBhDGLQCGIoFGOoC2AEBwgIWEC4YgAQYQxjUAhi0AhiKBRjqAtgBAcICEBAAGAMYtAIY6gIYjwHYAQLCAg4QABiABBixAxiDARiKBcICBBAAGAPCAgUQABiABMICCxAAGIAEGLEDGIoFwgIIEAAYgAQYsQPCAg0QABiABBixAxhDGIoFwgIWEC4YgAQYsQMY0QMYQxiDARjHARiKBcICChAAGIAEGEMYigXCAg0QLhiABBhDGNQCGIoFwgIQEAAYgAQYsQMYQxiDARiKBcICERAuGIAEGLEDGNEDGIMBGMcBwgIQEC4YgAQYsQMYQxjUAhiKBcICDRAuGIAEGNEDGMcBGAqYAxrxBfH5k-bG4v2kugYECAEYB7oGBggCEAEYCpIHBTIuNy4yoAeqTbIHBTAuNy4yuAfJDcIHBzItMi44LjHIB4QB&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Gaming
+
+level: INFO
+time: 2025-05-27 10:22:08,944
+log: Tab updated: https://www.google.com/search?q=youtube&sca_esv=829c1e259cd14284&ei=8UQ1aN6nEM2p4-EPgp_6OA&ved=0ahUKEwie5OmZ7cKNAxXN1DgGHYKPHgcQ4dUDCBA&uact=5&oq=youtube&gs_lp=Egxnd3Mtd2l6LXNlcnAiB3lvdXR1YmUyEBAuGIAEGLEDGEMYgwEYigUyEBAAGIAEGLEDGEMYgwEYigUyChAAGIAEGEMYigUyEBAAGIAEGLEDGEMYgwEYigUyCxAAGIAEGLEDGIMBMggQABiABBixAzIKEAAYgAQYQxiKBTIFEAAYgAQyCBAAGIAEGLEDMggQABiABBixAzIfEC4YgAQYsQMYQxiDARiKBRiXBRjcBBjeBBjgBNgBAkjDFVDRBljdEXABeAGQAQCYAagCoAHwCqoBBTAuNS4yuAEDyAEA-AEBmAIIoAL3C6gCFMICExAAGIAEGEMYtAIYigUY6gLYAQHCAhYQLhiABBhDGNQCGLQCGIoFGOoC2AEBwgITEC4YgAQYQxi0AhiKBRjqAtgBAcICGRAuGIAEGNEDGEMYtAIYxwEYigUY6gLYAQHCAhAQABgDGLQCGOoCGI8B2AECwgIQEC4YAxi0AhjqAhiPAdgBAsICCxAuGIAEGLEDGIMBwgIaEC4YgAQYsQMYgwEYlwUY3AQY3gQY4ATYAQLCAgsQABiABBixAxiKBZgDFeIDBRIBMSBA8QWpxMCKSAzeYboGBAgBGAe6BgYIAhABGAqSBwcxLjQuMi4xoAfgOLIHBzAuNC4yLjG4B-ILwgcHMi0xLjUuMsgHfg&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:22:18,596
+log: Tab updated: https://www.google.com/search?q=khanacademy&sca_esv=829c1e259cd14284&ei=90Q1aIrJGKyc4-EPveOXgA0&ved=0ahUKEwjKoOCc7cKNAxUszjgGHb3xBdAQ4dUDCBA&uact=5&oq=khanacademy&gs_lp=Egxnd3Mtd2l6LXNlcnAiC2toYW5hY2FkZW15Mg4QABiABBixAxiDARiKBTINEC4YgAQY0QMYxwEYCjIHEAAYgAQYCjILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgcQABiABBgKMgUQABiABEidH1CbB1jWHHABeAGQAQCYAdMBoAGKD6oBBTAuOS4yuAEDyAEA-AEBmAIMoAKmEKgCEsICExAAGIAEGEMYtAIYigUY6gLYAQHCAhQQABiABBjjBBi0AhjpBBjqAtgBAcICEBAAGAMYtAIY6gIYjwHYAQLCAgsQABiABBiRAhiKBcICCxAuGIAEGJECGIoFwgIFEC4YgATCAggQLhiABBixA8ICFhAuGIAEGLEDGNEDGEMYgwEYxwEYigXCAhAQABiABBixAxhDGIMBGIoFwgIQEC4YgAQYsQMYQxjUAhiKBcICChAuGIAEGEMYigXCAiUQLhiABBixAxjRAxhDGIMBGMcBGIoFGJcFGNwEGN4EGOAE2AECwgIKEAAYgAQYQxiKBcICEBAuGIAEGLEDGEMYgwEYigXCAhAQLhiABBjRAxhDGMcBGIoFwgINEAAYgAQYsQMYQxiKBcICDRAuGIAEGLEDGEMYigWYAw7xBRuFN-3nfzb1ugYECAEYB7oGBggCEAEYCpIHBTEuOC4zoAelkAGyBwUwLjguM7gHmBDCBwcyLTIuOS4xyAeNAQ&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Education
+
+level: INFO
+time: 2025-05-27 10:22:22,122
+log: Tab updated: https://www.google.com/search?q=roblox&sca_esv=829c1e259cd14284&ei=_kQ1aLXfC4q64-EP6K6UsAU&ved=0ahUKEwi11v6f7cKNAxUK3TgGHWgXBVYQ4dUDCBA&uact=5&oq=roblox&gs_lp=Egxnd3Mtd2l6LXNlcnAiBnJvYmxveDIQEC4YgAQYsQMYQxiDARiKBTINEAAYgAQYsQMYQxiKBTINEAAYgAQYsQMYQxiKBTIQEAAYgAQYsQMYQxiDARiKBTIKEAAYgAQYQxiKBTINEAAYgAQYsQMYQxiKBTIQEAAYgAQYsQMYQxiDARiKBTIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMgsQABiABBixAxiDATIfEC4YgAQYsQMYQxiDARiKBRiXBRjcBBjeBBjgBNgBAkiVI1CAC1iaG3ABeAGQAQCYAYIEoAHrEqoBCzAuMi4zLjEuMS4xuAEDyAEA-AEBmAIJoALwE6gCFMICExAAGIAEGEMYtAIYigUY6gLYAQHCAhkQLhiABBjRAxhDGLQCGMcBGIoFGOoC2AEBwgITEC4YgAQYQxi0AhiKBRjqAtgBAcICEBAAGAMYtAIY6gIYjwHYAQLCAhIQABgDGLQCGOoCGAoYjwHYAQLCAgsQABiABBiRAhiKBcICDhAAGIAEGLEDGIMBGIoFwgIFEAAYgATCAgUQLhiABMICExAuGIAEGLEDGEMYgwEY1AIYigXCAgoQLhiABBhDGIoFwgINEC4YgAQYsQMYQxiKBcICChAAGIAEGLEDGArCAg0QABiABBixAxiDARgKmAPrA-IDBRIBMSBA8QXKhjiks0W-SboGBAgBGAe6BgYIAhABGAqSBwkxLjIuMy4wLjOgB_GDArIHCTAuMi4zLjAuM7gH3BPCBwUyLTEuOMgHdw&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Gaming
+
+level: INFO
+time: 2025-05-27 10:22:25,460
+log: Tab updated: https://www.google.com/search?q=instagram&sca_esv=829c1e259cd14284&ei=BEU1aKffEbyH4-EP2MKUgAU&ved=0ahUKEwin8fKi7cKNAxW8wzgGHVghBVAQ4dUDCBA&uact=5&oq=instagram&gs_lp=Egxnd3Mtd2l6LXNlcnAiCWluc3RhZ3JhbTIQEAAYgAQYsQMYQxiDARiKBTILEAAYgAQYsQMYgwEyCBAAGIAEGLEDMggQABiABBixAzIIEAAYgAQYsQMyCBAAGIAEGLEDMggQABiABBixAzIIEAAYgAQYsQMyBRAAGIAEMggQABiABBixA0iDGFDmBljlFHABeAGQAQCYAbcBoAHKC6oBAzAuObgBA8gBAPgBAZgCCqACwgyoAhTCAhMQLhiABBhDGLQCGIoFGOoC2AEBwgITEAAYgAQYQxi0AhiKBRjqAtgBAcICFhAuGIAEGEMY1AIYtAIYigUY6gLYAQHCAhAQABgDGLQCGOoCGI8B2AECwgILEC4YgAQYsQMYgwHCAg4QABiABBixAxiDARiKBcICERAuGIAEGLEDGNEDGIMBGMcBwgIaEC4YgAQYsQMYgwEYlwUY3AQY3gQY4ATYAQLCAgoQABiABBhDGIoFwgIKEC4YgAQYQxiKBcICDRAAGIAEGLEDGEMYigXCAg0QLhiABBhDGNQCGIoFmAMQ8QUf6-G8d23KwroGBAgBGAe6BgYIAhABGAqSBwMxLjmgB5I9sgcDMC45uAeyDMIHBTItMS45yAdt&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+
+level: INFO
+time: 2025-05-27 10:22:30,563
+log: Tab updated: https://www.google.com/search?q=twitter&sca_esv=829c1e259cd14284&ei=CEU1aJmCJ_u84-EPwMWG0AI&ved=0ahUKEwiZpvyk7cKNAxV73jgGHcCiASoQ4dUDCBA&uact=5&oq=twitter&gs_lp=Egxnd3Mtd2l6LXNlcnAiB3R3aXR0ZXIyFhAuGIAEGLEDGNEDGEMYgwEYxwEYigUyEBAAGIAEGLEDGEMYgwEYigUyDhAAGIAEGLEDGIMBGIoFMhAQABiABBixAxhDGIMBGIoFMgsQABiABBixAxiDATIIEAAYgAQYsQMyDRAAGIAEGLEDGEMYigUyCBAAGIAEGLEDMgUQABiABDIIEAAYgAQYsQNIhhdQuwdYgBNwAXgBkAEAmAG9AaABqwmqAQMwLje4AQPIAQD4AQGYAgigAoUKqAIUwgITEC4YgAQYQxi0AhiKBRjqAtgBAcICGRAuGIAEGNEDGEMYtAIYxwEYigUY6gLYAQHCAhMQABiABBhDGLQCGIoFGOoC2AEBwgIQEC4YAxi0AhjqAhiPAdgBAsICEBAAGAMYtAIY6gIYjwHYAQLCAgoQABiABBhDGIoFwgIFEC4YgATCAg4QLhiABBjHARiOBRivAcICCBAuGIAEGLEDmAMO8QWdBAJx7VDxaroGBAgBGAe6BgYIAhABGAqSBwUxLjYuMaAHuz2yBwUwLjYuMbgH9wnCBwUyLTMuNcgHUw&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+
+level: INFO
+time: 2025-05-27 10:22:34,314
+log: Tab updated: https://www.google.com/search?q=news&sca_esv=829c1e259cd14284&ei=DUU1aLc-t5Tj4Q-LyNWoBw&ved=0ahUKEwj3-Ian7cKNAxU3yjgGHQtkFXUQ4dUDCBA&uact=5&oq=news&gs_lp=Egxnd3Mtd2l6LXNlcnAiBG5ld3MyExAAGIAEGLEDGEMYgwEYyQMYigUyChAAGIAEGEMYigUyCxAAGIAEGJIDGIoFMggQABiABBiSAzIQEAAYgAQYsQMYQxiDARiKBTILEAAYgAQYsQMYgwEyEBAAGIAEGLEDGEMYgwEYigUyChAAGIAEGEMYigUyEBAAGIAEGLEDGEMYgwEYigUyChAAGIAEGEMYigVI1hVQuQZYgxFwAXgBkAEAmAH5AaABqgaqAQUwLjIuMrgBA8gBAPgBAZgCBaAC6gaoAhTCAhMQABiABBhDGLQCGIoFGOoC2AEBwgIZEC4YgAQY0QMYQxi0AhjHARiKBRjqAtgBAcICEBAAGAMYtAIY6gIYjwHYAQLCAhAQLhgDGLQCGOoCGI8B2AECwgILEAAYgAQYkQIYigXCAhEQLhiABBixAxjRAxiDARjHAcICBRAAGIAEwgIOEAAYgAQYsQMYgwEYigXCAg4QLhiABBixAxjRAxjHAcICFhAuGIAEGLEDGNEDGEMYgwEYxwEYigXCAhAQLhiABBjRAxhDGMcBGIoFwgIIEAAYgAQYsQPCAgoQLhiABBhDGIoFmAMR8QWxIa_D88da47oGBAgBGAe6BgYIAhABGAqSBwUxLjIuMqAHvyGyBwUwLjIuMrgH2QbCBwMzLTXIBzo&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: News
+
+level: INFO
+time: 2025-05-27 10:22:39,346
+log: Tab updated: https://www.google.com/search?q=ebay&sca_esv=829c1e259cd14284&ei=EUU1aLCUF6uF4-EP9LqF8AQ&ved=0ahUKEwjw4JGp7cKNAxWrwjgGHXRdAU4Q4dUDCBA&uact=5&oq=ebay&gs_lp=Egxnd3Mtd2l6LXNlcnAiBGViYXkyGRAuGIAEGLEDGNEDGEMYgwEYxwEYyQMYigUyEBAAGIAEGLEDGEMYgwEYigUyDRAAGIAEGLEDGEMYigUyChAAGIAEGEMYigUyEBAAGIAEGLEDGEMYgwEYigUyChAAGIAEGEMYigUyCxAAGIAEGJIDGIoFMggQABiABBixAzILEAAYgAQYsQMYgwEyCxAAGIAEGLEDGIMBMigQLhiABBixAxjRAxhDGIMBGMcBGMkDGIoFGJcFGNwEGN4EGOAE2AECSNYOUL0GWOkKcAF4AZABAJgBtwGgAaoFqgEDMC40uAEDyAEA-AEBmAIFoALeBagCCsICEBAuGAMYtAIY6gIYjwHYAQHCAhAQABgDGLQCGOoCGI8B2AEBwgIOEAAYgAQYsQMYgwEYigXCAgQQABgDwgIFEAAYgATCAgsQABiABBixAxiKBcICFhAuGIAEGLEDGNEDGEMYgwEYxwEYigXCAiUQLhiABBixAxjRAxhDGIMBGMcBGIoFGJcFGNwEGN4EGOAE2AECmAMI8QU0sMHqJMXdhboGBAgBGAq6BgYIAhABGBSSBwMxLjSgB6EasgcDMC40uAfWBcIHBTItMS40yAcv&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+
+level: INFO
+time: 2025-05-27 10:22:42,804
+log: Tab updated: https://www.google.com/search?q=flipkart&sca_esv=829c1e259cd14284&ei=FEU1aNCoMNm94-EPo8ir2Qo&ved=0ahUKEwjQguKq7cKNAxXZ3jgGHSPkKqsQ4dUDCBA&uact=5&oq=flipkart&gs_lp=Egxnd3Mtd2l6LXNlcnAiCGZsaXBrYXJ0MhYQLhiABBixAxjRAxhDGIMBGMcBGIoFMgUQABiABDIQEAAYgAQYsQMYQxiDARiKBTINEAAYgAQYsQMYQxiKBTIIEAAYgAQYsQMyCBAAGIAEGLEDMggQABiABBixAzILEAAYgAQYsQMYgwEyEBAAGIAEGLEDGEMYgwEYigUyCBAAGIAEGLEDMiUQLhiABBixAxjRAxhDGIMBGMcBGIoFGJcFGNwEGN4EGOAE2AECSPYcUOcKWNUYcAF4AZABAJgBrwGgAYkKqgEDMC44uAEDyAEA-AEBmAIJoALuCqgCFMICGRAuGIAEGNEDGEMYtAIYxwEYigUY6gLYAQHCAhMQLhiABBhDGLQCGIoFGOoC2AEBwgITEAAYgAQYQxi0AhiKBRjqAtgBAcICFBAAGIAEGOMEGLQCGOkEGOoC2AEBwgIQEAAYAxi0AhjqAhiPAdgBAsICERAuGIAEGLEDGNEDGIMBGMcBwgILEC4YgAQYsQMYgwHCAiAQLhiABBixAxjRAxiDARjHARiXBRjcBBjeBBjgBNgBAsICChAAGIAEGEMYigXCAhMQABiABBixAxhDGIMBGMkDGIoFwgILEAAYgAQYkgMYigWYAxDxBYDom8RNZ6v4ugYECAEYB7oGBggCEAEYCpIHAzEuOKAH0z-yBwMwLji4B94KwgcFMi0zLjbIB1g&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+
+level: INFO
+time: 2025-05-27 10:22:51,663
+log: Tab updated: https://www.google.com/search?q=amazon&sca_esv=829c1e259cd14284&ei=GUU1aNfRMZuL4-EPz8et-A4&ved=0ahUKEwiXwpSt7cKNAxWbxTgGHc9jC-8Q4dUDCBA&uact=5&oq=amazon&gs_lp=Egxnd3Mtd2l6LXNlcnAiBmFtYXpvbjIZEC4YgAQYsQMY0QMYQxiDARjHARjJAxiKBTINEAAYgAQYsQMYQxiKBTINEAAYgAQYsQMYQxiKBTILEAAYgAQYkgMYigUyCxAAGIAEGJIDGIoFMgUQABiABDINEAAYgAQYsQMYQxiKBTINEAAYgAQYsQMYQxiKBTINEAAYgAQYsQMYQxiKBTILEAAYgAQYsQMYgwEyKBAuGIAEGLEDGNEDGEMYgwEYxwEYyQMYigUYlwUY3AQY3gQY4ATYAQJIwihQlAZY2iRwA3gBkAEAmAGNAqABlAyqAQUwLjUuM7gBA8gBAPgBAZgCC6AChg2oAhTCAhkQLhiABBjRAxhDGLQCGMcBGIoFGOoC2AEBwgITEAAYgAQYQxi0AhiKBRjqAtgBAcICEBAAGAMYtAIY6gIYjwHYAQLCAhYQLhiABBixAxjRAxhDGIMBGMcBGIoFwgIKEAAYgAQYQxiKBcICDhAuGIAEGLEDGIMBGIoFwgIIEAAYgAQYsQPCAiUQLhiABBixAxjRAxhDGIMBGMcBGIoFGJcFGNwEGN4EGOAE2AECwgIQEAAYgAQYsQMYQxiDARiKBcICDhAAGIAEGLEDGIMBGIoFwgITEC4YgAQYsQMY0QMYgwEYxwEYCsICDBAAGIAEGEMYigUYCsICDRAuGIAEGEMY1AIYigXCAgcQABiABBgKwgIKEAAYgAQYsQMYCsICIhAuGIAEGLEDGNEDGIMBGMcBGAoYlwUY3AQY3gQY4ATYAQLCAg0QABiABBixAxiDARgKmAML8QU6ctLARXZHi7oGBAgBGAe6BgYIAhABGAqSBwUzLjUuM6AH2kqyBwUwLjUuM7gH5wzCBwUyLTQuN8gHZg&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+
+level: INFO
+time: 2025-05-27 10:22:58,791
+log: Tab updated: https://www.google.com/search?q=coursera&sca_esv=829c1e259cd14284&ei=IEU1aKGHObGW4-EPkLmjkQ8&ved=0ahUKEwihl8ew7cKNAxUxyzgGHZDcKPIQ4dUDCBA&uact=5&oq=coursera&gs_lp=Egxnd3Mtd2l6LXNlcnAiCGNvdXJzZXJhMhYQLhiABBixAxjRAxhDGIMBGMcBGIoFMggQABiABBixAzIIEAAYgAQYsQMyCBAAGIAEGLEDMggQABiABBixAzIFEAAYgAQyCBAAGIAEGLEDMgsQABiABBixAxiDATILEAAYgAQYsQMYgwEyCBAAGIAEGLEDMiUQLhiABBixAxjRAxhDGIMBGMcBGIoFGJcFGNwEGN4EGOAE2AECSLErUKoaWOomcAF4AZABAJgB1wGgAc4KqgEFMC43LjG4AQPIAQD4AQGYAgmgArsLqAIUwgIZEC4YgAQY0QMYQxi0AhjHARiKBRjqAtgBAcICExAAGIAEGEMYtAIYigUY6gLYAQHCAhoQLhiABBjRAxjjBBi0AhjHARjpBBjqAtgBAcICFBAAGIAEGOMEGLQCGOkEGOoC2AEBwgIQEAAYAxi0AhjqAhiPAdgBAsICEBAuGAMYtAIY6gIYjwHYAQLCAhAQLhiABBjRAxhDGMcBGIoFwgIOEAAYgAQYsQMYgwEYigXCAh8QLhiABBjRAxhDGMcBGIoFGJcFGNwEGN4EGOAE2AECwgINEAAYgAQYsQMYQxiKBcICFBAuGIAEGMcBGJgFGJkFGJ4FGK8BwgIIEC4YgAQYsQPCAg4QLhiABBixAxjRAxjHAcICChAAGIAEGEMYigXCAhMQLhiABBixAxjRAxhDGMcBGIoFwgINEC4YgAQYsQMYQxiKBZgDEfEF1BdtgnIWK4S6BgQIARgHugYGCAIQARgKkgcFMS43LjGgB9dWsgcFMC43LjG4B6oLwgcFMi0xLjjIB2E&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Education
+
+level: INFO
+time: 2025-05-27 10:23:11,295
+log: Tab updated: https://www.google.com/search?q=slack&sca_esv=829c1e259cd14284&ei=KEU1aO7KEruO4-EPwY6duAU&ved=0ahUKEwju_oi07cKNAxU7xzgGHUFHB1cQ4dUDCBA&uact=5&oq=slack&gs_lp=Egxnd3Mtd2l6LXNlcnAiBXNsYWNrMhAQABiABBixAxhDGIMBGIoFMhAQABiABBixAxhDGIMBGIoFMhAQABiABBixAxhDGIMBGIoFMggQABiABBixAzIFEAAYgAQyChAAGIAEGEMYigUyBRAAGIAEMggQABiABBixAzILEAAYgAQYsQMYgwEyCBAAGIAEGLEDSMUZUOANWNgVcAF4AZABAJgBgwKgAfIHqgEFMC4zLjK4AQPIAQD4AQGYAgagArEIqAIUwgIZEC4YgAQY0QMYQxi0AhjHARiKBRjqAtgBAcICExAAGIAEGEMYtAIYigUY6gLYAQHCAhAQABgDGLQCGOoCGI8B2AECwgIQEC4YgAQY0QMYQxjHARiKBcICDRAAGIAEGLEDGEMYigXCAg4QABiABBixAxiDARiKBZgDC_EFVSDjx-x3Zaa6BgQIARgHugYGCAIQARgKkgcFMS4yLjOgB7kbsgcFMC4yLjO4B6YIwgcDMy02yAc5&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-27 10:23:27,212
+log: Tab updated: https://www.google.com/search?q=trading&sca_esv=829c1e259cd14284&ei=MUU1aIPPFr6b4-EPx-GU6AU&ved=0ahUKEwjDq7K47cKNAxW-zTgGHccwBV0Q4dUDCBA&uact=5&oq=trading&gs_lp=Egxnd3Mtd2l6LXNlcnAiB3RyYWRpbmcyEBAAGIAEGLEDGEMYgwEYigUyEBAAGIAEGLEDGEMYgwEYigUyCxAAGIAEGLEDGIMBMggQABiABBixAzIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMgsQABiABBixAxiDATIFEAAYgAQyCBAAGIAEGLEDMggQABiABBixA0jHFlCOB1ifE3ABeAGQAQCYAbUCoAGSDaoBBzAuMS41LjG4AQPIAQD4AQGYAgigAvoNqAIUwgIZEC4YgAQY0QMYQxi0AhjHARiKBRjqAtgBAcICExAAGIAEGEMYtAIYigUY6gLYAQHCAhAQABgDGLQCGOoCGI8B2AECwgIKEAAYgAQYQxiKBcICFhAuGIAEGLEDGNEDGEMYgwEYxwEYigXCAgUQLhiABMICEBAuGIAEGNEDGEMYxwEYigXCAg0QABiABBhDGMkDGIoFwgIOEAAYgAQYsQMYgwEYigXCAgsQABiABBiSAxiKBZgDD_EFiKLQNYsWDSW6BgQIARgHugYGCAIQARgKkgcHMS4wLjYuMaAHySuyBwUyLTYuMbgH6w3CBwMzLTjIB18&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Finance
+
+level: INFO
+time: 2025-05-27 10:23:32,609
+log: Tab updated: https://www.google.com/search?q=bbc&sca_esv=829c1e259cd14284&ei=REU1aLuNHZKUg8UPu5SB8AI&ved=0ahUKEwi7v8DB7cKNAxUSyqACHTtKAC4Q4dUDCBA&uact=5&oq=bbc&gs_lp=Egxnd3Mtd2l6LXNlcnAiA2JiYzIREAAYgAQYkQIYsQMYgwEYigUyGRAuGIAEGLEDGNEDGEMYgwEYxwEYyQMYigUyFhAuGIAEGLEDGNEDGEMYgwEYxwEYigUyFhAuGIAEGLEDGNEDGEMYgwEYxwEYigUyDRAAGIAEGLEDGEMYigUyEBAAGIAEGLEDGEMYgwEYigUyCxAAGIAEGLEDGIMBMgsQABiABBixAxiDATILEAAYgAQYkgMYigUyCBAAGIAEGLEDSO8PUJEGWM8McAF4AZABAJgB_gGgAf0EqgEFMC4xLjK4AQPIAQD4AQGYAgSgAqwFqAIUwgITEAAYgAQYQxi0AhiKBRjqAtgBAcICFBAAGIAEGOMEGLQCGOkEGOoC2AEBwgIQEAAYAxi0AhjqAhiPAdgBAsICEBAuGIAEGNEDGEMYxwEYigXCAgoQABiABBhDGIoFwgIOEC4YgAQYsQMY0QMYxwHCAgUQABiABMICCxAuGIAEGNEDGMcBwgIfEC4YgAQY0QMYQxjHARiKBRiXBRjcBBjeBBjgBNgBAsICCxAuGIAEGLEDGIMBwgIIEC4YgAQYsQOYAw3xBUrtutROpzbnugYECAEYB7oGBggCEAEYCpIHBTEuMS4yoAfTKbIHBTAuMS4yuAefBcIHBTItMS4zyAcr&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: News
+
+level: INFO
+time: 2025-05-27 10:23:37,516
+log: Tab updated: https://www.google.com/search?q=finance&sca_esv=829c1e259cd14284&ei=SkU1aORy86zj4Q_92oLACg&ved=0ahUKEwjkv5LE7cKNAxVz1jgGHX2tAKgQ4dUDCBA&uact=5&oq=finance&gs_lp=Egxnd3Mtd2l6LXNlcnAiB2ZpbmFuY2UyEBAAGIAEGLEDGEMYyQMYigUyEBAAGIAEGLEDGEMYgwEYigUyCBAAGIAEGLEDMg0QABiABBixAxhDGIoFMggQABiABBixAzIFEAAYgAQyBRAAGIAEMggQABiABBixAzIIEAAYgAQYsQMyCxAAGIAEGJIDGIoFSPQUUPgGWP0QcAF4AZABAJgBtAGgAbAJqgEDMC43uAEDyAEA-AEBmAIIoAKZCqgCCsICEBAAGAMYtAIY6gIYjwHYAQHCAhAQLhgDGLQCGOoCGI8B2AEBwgIWEC4YgAQYsQMY0QMYQxiDARjHARiKBcICChAAGIAEGEMYigXCAhEQLhiABBixAxjRAxiDARjHAcICCxAAGIAEGLEDGIMBwgILEC4YgAQYsQMYgwHCAiUQLhiABBixAxjRAxhDGIMBGMcBGIoFGJcFGNwEGN4EGOAE2AECwgIQEC4YgAQY0QMYQxjHARiKBcICDhAuGIAEGLEDGIMBGNQCwgINEC4YgAQYsQMYQxiKBcICExAuGIAEGLEDGEMYgwEY1AIYigXCAhAQLhiABBixAxhDGIMBGIoFwgIOEAAYgAQYsQMYgwEYigWYAwvxBcGsKJ_3eIttugYECAEYCroGBggCEAEYFJIHAzEuN6AH4TyyBwMwLje4B44KwgcHMi0yLjUuMcgHXQ&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Finance
+
+level: INFO
+time: 2025-05-27 10:23:43,364
+log: Tab updated: https://www.google.com/search?q=nytimes&sca_esv=829c1e259cd14284&ei=T0U1aKyPBrm3juMPob6B2AY&ved=0ahUKEwjs8sjG7cKNAxW5m2MGHSFfAGsQ4dUDCBA&uact=5&oq=nytimes&gs_lp=Egxnd3Mtd2l6LXNlcnAiB255dGltZXMyEBAAGIAEGLEDGEMYgwEYigUyEBAAGIAEGLEDGEMYgwEYigUyEBAuGIAEGLEDGEMYgwEYigUyEBAAGIAEGLEDGEMYgwEYigUyEBAuGIAEGLEDGEMYgwEYigUyCxAAGIAEGLEDGIMBMgsQABiABBixAxiDATILEAAYgAQYsQMYgwEyCxAAGIAEGLEDGIMBMgUQABiABEi_IVCaDViJGnABeAGQAQCYAbsCoAGKC6oBBzAuNC4yLjG4AQPIAQD4AQGYAgigAtkLqAIUwgITEAAYgAQYQxi0AhiKBRjqAtgBAcICEBAAGAMYtAIY6gIYjwHYAQLCAhAQLhgDGLQCGOoCGI8B2AECwgIREC4YgAQYsQMY0QMYgwEYxwHCAg4QABiABBixAxiDARiKBcICChAAGIAEGEMYigXCAhAQLhiABBjRAxhDGMcBGIoFwgIKEC4YgAQYQxiKBcICDhAuGIAEGLEDGNEDGMcBwgINEAAYgAQYsQMYQxiKBZgDCfEFwWv7j0Lg8fy6BgQIARgHugYGCAIQARgKkgcHMS40LjIuMaAH5UiyBwcwLjQuMi4xuAfQC8IHBTItMy41yAdH&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: News
+
+level: INFO
+time: 2025-05-27 10:24:30,243
+log: Test log for youtube.com
+ip: 127.0.0.1
+user_agent: PostmanRuntime/7.44.0
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:29:52,550
+log: Tab updated: http://127.0.0.1:5000/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:30:20,561
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:30:21,647
+log: Tab updated: https://github.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-27 10:30:27,864
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:30:38,508
+log: Tab updated: https://www.linkedin.com/feed/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:30:42,863
+log: Tab updated: https://www.amazon.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+
+level: INFO
+time: 2025-05-27 10:30:49,804
+log: Tab updated: https://www.google.com/search?q=flipkart&oq=fli&gs_lcrp=EgZjaHJvbWUqEAgAEAAYgwEY4wIYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyEwgBEC4YgwEYxwEYsQMY0QMYgAQyBggCEEUYQDIGCAMQRRg5Mg0IBBAAGIMBGLEDGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEIMzE3MWowajSoAgCwAgE&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+
+level: INFO
+time: 2025-05-27 10:30:56,441
+log: Tab updated: https://www.google.com/search?q=gitlab&sca_esv=829c1e259cd14284&ei=AEc1aNv3FaSUseMP4K3ImA0&ved=0ahUKEwjb95SV78KNAxUkSmwGHeAWEtMQ4dUDCBA&uact=5&oq=gitlab&gs_lp=Egxnd3Mtd2l6LXNlcnAiBmdpdGxhYjIIEAAYgAQYsQMyEBAAGIAEGLEDGEMYgwEYigUyCBAAGIAEGLEDMhEQLhiABBixAxjRAxiDARjHATIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMgsQABiABBixAxiDATIIEAAYgAQYsQMyBRAAGIAEMgUQABiABEi2GVC0CljrFXABeAGQAQCYAcABoAH7B6oBAzAuNrgBA8gBAPgBAZgCB6AC7AioAhTCAhkQLhiABBjRAxhDGLQCGMcBGIoFGOoC2AEBwgITEAAYgAQYQxi0AhiKBRjqAtgBAcICEBAAGAMYtAIY6gIYjwHYAQLCAhIQABgDGLQCGOoCGAoYjwHYAQLCAhEQLhiABBiRAhjRAxjHARiKBcICDhAAGIAEGLEDGIMBGIoFwgIKEAAYgAQYQxiKBcICDRAAGIAEGLEDGEMYigXCAhYQLhiABBixAxjRAxhDGIMBGMcBGIoFwgITEC4YgAQYsQMY0QMYQxjHARiKBcICDBAAGIAEGEMYigUYCsICDRAuGIAEGLEDGEMYigXCAiUQLhiABBixAxjRAxhDGIMBGMcBGIoFGJcFGNwEGN4EGOAE2AECwgIHEC4YgAQYCsICChAAGIAEGLEDGAqYAybxBQas83O6P5PtugYECAEYB7oGBggCEAEYCpIHBTEuNS4xoAfRLrIHBTAuNS4xuAfGCMIHBzItMS41LjHIB2c&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-27 10:31:16,869
+log: Tab updated: https://www.google.com/search?q=slack&sca_esv=829c1e259cd14284&ei=EEc1aPHREambnesPye7xoQw&ved=0ahUKEwjxmeGc78KNAxWpTWcHHUl3PMQQ4dUDCBA&uact=5&oq=slack&gs_lp=Egxnd3Mtd2l6LXNlcnAiBXNsYWNrMhAQABiABBixAxhDGIMBGIoFMhAQABiABBixAxhDGIMBGIoFMgoQABiABBhDGIoFMhAQABiABBixAxhDGIMBGIoFMggQABiABBixAzINEAAYgAQYsQMYQxiKBTITEC4YgAQYsQMYQxiDARjUAhiKBTINEAAYgAQYsQMYQxiKBTIIEAAYgAQYsQMyBRAAGIAESMkbUOgHWN0PcAF4AZABAJgB5AGgAZcHqgEFMC40LjG4AQPIAQD4AQGYAgagAuQHqAIUwgIZEC4YgAQY0QMYQxi0AhjHARiKBRjqAtgBAcICExAuGIAEGEMYtAIYigUY6gLYAQHCAhMQABiABBhDGLQCGIoFGOoC2AEBwgIUEAAYgAQY4wQYtAIY6QQY6gLYAQHCAhAQABgDGLQCGOoCGI8B2AECwgIQEC4YAxi0AhjqAhiPAdgBAsICERAuGIAEGJECGNEDGMcBGIoFwgILEAAYgAQYkQIYigXCAgsQABiABBixAxiDAcICERAuGIAEGLEDGNEDGIMBGMcBwgIOEAAYgAQYsQMYgwEYigXCAiAQLhiABBiRAhjRAxjHARiKBRiXBRjcBBjeBBjgBNgBAsICEBAuGIAEGNEDGEMYxwEYigXCAh8QLhiABBjRAxhDGMcBGIoFGJcFGNwEGN4EGOAE2AECwgINEC4YgAQYsQMYQxiKBcICEBAuGIAEGLEDGEMYgwEYigXCAgoQLhiABBhDGIoFwgIcEC4YgAQYsQMYQxiKBRiXBRjcBBjeBBjgBNgBApgDFPEFYAeQYTmP1vq6BgQIARgHugYGCAIQARgKkgcFMS40LjGgB7I6sgcFMC40LjG4B9AHwgcDMy02yAdG&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-27 10:31:25,601
+log: Tab updated: https://www.google.com/search?q=netflix&sca_esv=829c1e259cd14284&ei=GUc1aKqqGPOVseMP4b6q6Q4&gs_ssp=eJzj4tTP1TcwNC9Ki1dgNGB0YPBiz0stScvJrAAASpUGiw&oq=netflki&gs_lp=Egxnd3Mtd2l6LXNlcnAiB25ldGZsa2kqAggAMhYQLhiABBixAxjRAxhDGIMBGMcBGIoFMgoQABiABBixAxgKMg0QABiABBixAxhDGIoFMgoQABiABBixAxgKMgoQABiABBixAxgKMg0QLhiABBixAxiDARgKMg0QABiABBixAxiDARgKMgcQABiABBgKMgoQABiABBixAxgKMgoQABiABBixAxgKMiUQLhiABBixAxjRAxhDGIMBGMcBGIoFGJcFGNwEGN4EGOAE2AECSL05UO0LWLcXcAF4AZABAJgBzAGgAb8JqgEFMC42LjG4AQHIAQD4AQGYAgmgArMnqAIUwgIZEC4YgAQY0QMYQxi0AhjHARiKBRjqAtgBAcICExAAGIAEGEMYtAIYigUY6gLYAQHCAhAQABgDGLQCGOoCGI8B2AECwgIQEAAYgAQYsQMYQxiDARiKBcICERAuGIAEGLEDGNEDGIMBGMcBwgIFEAAYgATCAg4QABiABBixAxiDARiKBcICCxAAGIAEGLEDGIMBwgIOEC4YgAQYsQMY0QMYxwHCAgoQABiABBhDGIoFwgILEAAYgAQYsQMYigXCAhAQLhiABBjRAxhDGMcBGIoFwgIIEAAYgAQYsQPCAgsQLhiABBixAxiDAZgDDPEFutRU625n5QC6BgQIARgHugYGCAIQARgKkgcJMS41LjIuOS0xoAfASbIHBTAuNS4yuAeRCsIHBTItMy42yAdZ&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:31:32,851
+log: Tab updated: https://www.google.com/search?q=roblox&sca_esv=829c1e259cd14284&ei=IUc1aLzvFLKSseMPk-nOkQM&ved=0ahUKEwj8g_Kk78KNAxUySWwGHZO0MzIQ4dUDCBA&uact=5&oq=roblox&gs_lp=Egxnd3Mtd2l6LXNlcnAiBnJvYmxveDIQEC4YgAQYsQMYQxiDARiKBTINEAAYgAQYsQMYQxiKBTIQEAAYgAQYsQMYQxiDARiKBTINEAAYgAQYsQMYQxiKBTIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMgsQABiABBixAxiDATILEAAYgAQYsQMYgwEyBRAuGIAEMggQABiABBixAzIfEC4YgAQYsQMYQxiDARiKBRiXBRjcBBjeBBjgBNgBAkjII1D4Cli-G3ACeAGQAQCYAfsBoAGPCqoBBTAuNS4yuAEDyAEA-AEBmAIJoAKHC6gCFMICExAAGIAEGEMYtAIYigUY6gLYAQHCAhwQLhiABBjRAxhDGNQCGLQCGMcBGIoFGOoC2AEBwgIQEAAYAxi0AhjqAhiPAdgBAsICEBAuGAMYtAIY6gIYjwHYAQLCAhIQABgDGLQCGOoCGAoYjwHYAQLCAgsQLhiABBiRAhiKBcICDhAAGIAEGLEDGIMBGIoFwgIOEC4YgAQYsQMY0QMYxwHCAgUQABiABMICGhAuGIAEGJECGIoFGJcFGNwEGN4EGOAE2AECwgIQEC4YgAQY0QMYQxjHARiKBcICChAAGIAEGEMYigXCAggQLhiABBixA8ICCxAuGIAEGLEDGIMBwgITEC4YgAQYsQMYQxiDARjUAhiKBcICDRAuGIAEGLEDGEMYigXCAgoQABiABBixAxgKwgINEAAYgAQYsQMYgwEYCsICBxAuGIAEGAqYAwvxBYoU7lwZURpSugYECAEYB7oGBggCEAEYCpIHBTIuNC4zoAfRb7IHBTAuNC4zuAfsCsIHAzMtOcgHaQ&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Gaming
+
+level: INFO
+time: 2025-05-27 10:31:42,906
+log: Tab updated: https://www.google.com/search?q=twitter&sca_esv=829c1e259cd14284&ei=Kkc1aOKwHLKqseMPhvKt0A8&ved=0ahUKEwji7Z6p78KNAxUyVWwGHQZ5C_oQ4dUDCBA&uact=5&oq=twitter&gs_lp=Egxnd3Mtd2l6LXNlcnAiB3R3aXR0ZXIyFhAuGIAEGLEDGNEDGEMYgwEYxwEYigUyChAAGIAEGEMYigUyDhAAGIAEGLEDGIMBGIoFMgsQABiABBixAxiDATIQEAAYgAQYsQMYQxiDARiKBTINEAAYgAQYsQMYQxiKBTILEAAYgAQYsQMYgwEyCBAAGIAEGLEDMggQABiABBixAzINEAAYgAQYsQMYQxiKBUjFMlDBHliHK3ABeAGQAQCYAeYDoAH9EKoBCTAuMi4yLjEuMrgBA8gBAPgBAZgCCKACzxGoAhTCAhMQLhiABBhDGLQCGIoFGOoC2AEBwgITEAAYgAQYQxi0AhiKBRjqAtgBAcICFhAuGIAEGEMY1AIYtAIYigUY6gLYAQHCAhAQABgDGLQCGOoCGI8B2AECwgIFEC4YgATCAgUQABiABMICCBAuGIAEGLEDwgILEC4YgAQYsQMYgwGYAxfxBcpxvvG-QRrIugYECAEYB7oGBggCEAEYCpIHCTEuMi4yLjEuMqAHsj2yBwkwLjIuMi4xLjK4B7gRwgcHMi0zLjQuMcgHSQ&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+
+level: INFO
+time: 2025-05-27 10:31:48,695
+log: Tab updated: https://www.google.com/search?q=instagram&sca_esv=829c1e259cd14284&ei=Mkc1aL6pI_DXseMP9d-9sQM&ved=0ahUKEwi-io6t78KNAxXwa2wGHfVvLzYQ4dUDCBA&uact=5&oq=instagram&gs_lp=Egxnd3Mtd2l6LXNlcnAiCWluc3RhZ3JhbTIQEAAYgAQYsQMYQxiDARiKBTIQEAAYgAQYsQMYQxiDARiKBTIIEAAYgAQYsQMyCBAAGIAEGLEDMgoQABiABBhDGIoFMggQABiABBixAzIIEAAYgAQYsQMyCBAAGIAEGLEDMggQABiABBixAzIFEAAYgARIyxtQ2QZYlBZwAXgBkAEAmAG4AaABjAuqAQMwLjm4AQPIAQD4AQGYAgqgAv4LqAIUwgITEAAYgAQYQxi0AhiKBRjqAtgBAcICGRAuGIAEGNEDGEMYtAIYxwEYigUY6gLYAQHCAhAQABgDGLQCGOoCGI8B2AECwgIQEC4YAxi0AhjqAhiPAdgBAsICCxAuGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigXCAgsQABiABBixAxiDAcICERAuGIAEGLEDGNEDGIMBGMcBmAMc8QVdiPtOpILeV7oGBAgBGAe6BgYIAhABGAqSBwMxLjmgB5M3sgcDMC45uAfiC8IHBzItMi43LjHIB2g&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+
+level: INFO
+time: 2025-05-27 10:31:55,562
+log: Tab updated: https://www.google.com/search?q=snapchat&sca_esv=829c1e259cd14284&ei=O0c1aNqdNLTvseMPzYG4-AY&ved=0ahUKEwiap8Sx78KNAxW0d2wGHc0ADm8Q4dUDCBA&uact=5&oq=snapchat&gs_lp=Egxnd3Mtd2l6LXNlcnAiCHNuYXBjaGF0MhAQABiABBixAxhDGIMBGIoFMhEQLhiABBixAxjRAxiDARjHATILEAAYgAQYsQMYgwEyCBAAGIAEGLEDMggQABiABBixAzIIEAAYgAQYsQMyCBAAGIAEGLEDMggQABiABBixAzIIEAAYgAQYsQMyCBAAGIAEGLEDSLAmUKoHWIoccAJ4AZABAJgBxQGgAaAMqgEDMC45uAEDyAEA-AEBmAILoAKxDagCFMICExAuGIAEGEMYtAIYigUY6gLYAQHCAhkQLhiABBjRAxhDGLQCGMcBGIoFGOoC2AEBwgITEAAYgAQYQxi0AhiKBRjqAtgBAcICEBAAGAMYtAIY6gIYjwHYAQLCAhAQLhgDGLQCGOoCGI8B2AECwgIWEC4YgAQYsQMY0QMYQxiDARjHARiKBcICEBAuGIAEGNEDGEMYxwEYigXCAg4QABiABBixAxiDARiKBcICDRAAGIAEGLEDGEMYigXCAgoQABiABBhDGIoFwgIQEC4YgAQYsQMYQxiDARiKBcICChAuGIAEGEMYigXCAiUQLhiABBixAxjRAxhDGIMBGMcBGIoFGJcFGNwEGN4EGOAE2AECwgIOEC4YgAQYsQMY0QMYxwHCAg0QLhiABBixAxhDGIoFwgILEC4YgAQY0QMYxwHCAhwQLhiABBixAxhDGIoFGJcFGNwEGN4EGOAE2AECmAMW8QXRFwbsXE9HRboGBAgBGAe6BgYIAhABGAqSBwUyLjcuMqAHv2myBwUwLjcuMrgHjA3CBwcyLTIuOC4xyAeBAQ&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+
+level: INFO
+time: 2025-05-27 10:32:01,178
+log: Tab updated: https://www.google.com/search?q=flipkart&sca_esv=829c1e259cd14284&ei=Qkc1aKilC9KaseMP-svgkA8&ved=0ahUKEwiozsa078KNAxVSTWwGHfolGPIQ4dUDCBA&uact=5&oq=flipkart&gs_lp=Egxnd3Mtd2l6LXNlcnAiCGZsaXBrYXJ0MhYQLhiABBixAxjRAxhDGIMBGMcBGIoFMgUQABiABDIIEAAYgAQYsQMyCBAAGIAEGLEDMggQABiABBixAzIQEAAYgAQYsQMYQxiDARiKBTILEAAYgAQYsQMYgwEyCBAAGIAEGLEDMg0QABiABBixAxhDGIoFMggQABiABBixAzIlEC4YgAQYsQMY0QMYQxiDARjHARiKBRiXBRjcBBjeBBjgBNgBAkjNGFCpB1jfEnABeAGQAQCYAeEBoAGUC6oBBTAuNy4xuAEDyAEA-AEBmAIJoAKADKgCFMICExAAGIAEGEMYtAIYigUY6gLYAQHCAhAQABgDGLQCGOoCGI8B2AECwgIQEC4YAxi0AhjqAhiPAdgBAsICERAuGIAEGLEDGNEDGIMBGMcBwgILEC4YgAQYsQMYgwHCAgoQABiABBhDGIoFwgINEC4YgAQYsQMYQxiKBcICExAAGIAEGLEDGEMYgwEYyQMYigXCAgsQABiABBiSAxiKBZgDF_EFWNAwKINNjYi6BgQIARgHugYGCAIQARgKkgcFMS42LjKgB_9AsgcFMC42LjK4B-kLwgcHMi0zLjUuMcgHXw&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+
+level: INFO
+time: 2025-05-27 10:32:08,382
+log: Tab updated: https://www.google.com/search?q=tiktok&sca_esv=829c1e259cd14284&ei=R0c1aKSlO-uMseMP_8HGoQE&ved=0ahUKEwjk5Ke378KNAxVrRmwGHf-gMRQQ4dUDCBA&uact=5&oq=tiktok&gs_lp=Egxnd3Mtd2l6LXNlcnAiBnRpa3RvazINEAAYgAQYsQMYQxiKBTINEAAYgAQYsQMYQxiKBTINEAAYgAQYsQMYQxiKBTINEAAYgAQYsQMYQxiKBTINEAAYgAQYsQMYQxiKBTINEAAYgAQYsQMYQxiKBTINEAAYgAQYsQMYQxiKBTIQEAAYgAQYsQMYQxiDARiKBTIQEAAYgAQYsQMYQxiDARiKBTINEAAYgAQYsQMYQxiKBUiqH1DhB1ijFnABeAGQAQCYAf0BoAH9CKoBBTAuNS4xuAEDyAEA-AEBmAIHoALRCagCFMICGRAuGIAEGNEDGEMYtAIYxwEYigUY6gLYAQHCAhMQABiABBhDGLQCGIoFGOoC2AEBwgIQEAAYAxi0AhjqAhiPAdgBAsICCxAAGIAEGJECGIoFwgILEAAYgAQYsQMYgwHCAgUQABiABMICBRAuGIAEwgIOEC4YgAQYxwEYjgUYrwHCAhEQLhiABBixAxjRAxiDARjHAcICDhAuGIAEGLEDGIMBGIoFwgIIEAAYgAQYsQPCAgoQABiABBhDGIoFwgITEC4YgAQYsQMY0QMYQxjHARiKBZgDG_EF25YST5xpl7u6BgQIARgHugYGCAIQARgKkgcFMS40LjKgB5MusgcFMC40LjK4B7YJwgcHMi0zLjMuMcgHTA&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+
+level: INFO
+time: 2025-05-27 10:32:15,010
+log: Tab updated: https://www.google.com/search?q=youtube&sca_esv=829c1e259cd14284&ei=Tkc1aPeHF4y8seMPjvDKiAo&ved=0ahUKEwj35q6678KNAxUMXmwGHQ64EqEQ4dUDCBA&uact=5&oq=youtube&gs_lp=Egxnd3Mtd2l6LXNlcnAiB3lvdXR1YmUyEBAuGIAEGLEDGEMYgwEYigUyChAAGIAEGEMYigUyChAAGIAEGEMYigUyChAAGIAEGEMYigUyEBAAGIAEGLEDGEMYgwEYigUyChAAGIAEGEMYigUyCxAAGIAEGLEDGIMBMhAQABiABBixAxhDGIMBGIoFMgoQABiABBhDGIoFMggQABiABBixAzIfEC4YgAQYsQMYQxiDARiKBRiXBRjcBBjeBBjgBNgBAkiHIVD3DVimGXABeAGQAQCYAfEBoAHYCaoBBTAuNS4yuAEDyAEA-AEBmAIIoAK6CqgCFMICExAAGIAEGEMYtAIYigUY6gLYAQHCAhMQLhiABBhDGLQCGIoFGOoC2AEBwgIZEC4YgAQY0QMYQxi0AhjHARiKBRjqAtgBAcICEBAAGAMYtAIY6gIYjwHYAQLCAgUQABiABMICCxAuGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigWYAwvxBfwuR1s39dbHugYECAEYB7oGBggCEAEYCpIHBTEuNS4yoAfQObIHBTAuNS4yuAevCsIHAzMtOMgHVw&sclient=gws-wiz-serp
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+

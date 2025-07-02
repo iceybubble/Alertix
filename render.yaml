@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: siem-log-server
+    runtime: python
+    rootDir: siem-log-server
+    buildCommand: pip install -r ../requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://siem_user:akru9722@cluster0.62dwqkn.mongodb.net/logs_database?retryWrites=true&w=majority&appName=Cluster0
+      - key: SECRET_KEY
+        value: your-very-secure-secret-key
+      - key: JWT_SECRET
+        value: your-secret-here
+      - key: GOOGLE_OAUTH_CLIENT_ID
+        value: your-client-id.apps.googleusercontent.com
+      - key: GOOGLE_OAUTH_CLIENT_SECRET
+        value: your-client-secret

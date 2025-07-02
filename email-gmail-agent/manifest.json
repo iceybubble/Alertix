@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Activity Logger",
+  "version": "1.0",
+  "description": "Logs when Gmail is opened or closed.",
+  "permissions": ["tabs", "webNavigation"],
+  "host_permissions": ["*://mail.google.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Gmail Activity Logger"
+  }
+}

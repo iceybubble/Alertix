@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Logger",
+  "version": "1.0",
+  "description": "Logs browser events to a Flask server",
+  "permissions": [
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://localhost:5000/",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Chrome Logger Active"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {"name":"Python Debugger: Current File","type":"debugpy","request":"launch","program":"${file}","console":"integratedTerminal"},
+    {
+      "name": "Python: Flask",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "flask",
+      "env": {
+  "FLASK_APP": "siem-log-server/google_auth_app.py",
+  "FLASK_ENV": "development",
+  "OAUTHLIB_INSECURE_TRANSPORT": "1"
+},
+
+      "args": [
+        "run",
+        "--no-debugger",
+        "--no-reload"
+      ],
+      "cwd": "${workspaceFolder}/siem-log-server",
+
+      "jinja": true
+    }
+  ]
+}

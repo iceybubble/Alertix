@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Recent Logs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f0f2f5;
+        }
+        h2 {
+            color: #333;
+        }
+        .log-container {
+            background: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 10px;
+            max-height: 600px;
+            overflow-y: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .log-entry {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px 0;
+        }
+        .log-entry:last-child {
+            border-bottom: none;
+        }
+        .timestamp {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .level {
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .Info {
+            background-color: #6c757d;
+        }
+        .Low-Critical {
+            background-color: #17a2b8;
+        }
+        .High-Critical {
+            background-color: #ffc107;
+            color: #000;
+        }
+        .Urgent-Critical {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <h2>Latest 10 Logs (Auto-refresh every 15 seconds)</h2>
+    <div class="log-container" id="logContainer">
+        Loading logs...
+    </div>
+
+    <script>
+        async function fetchLogs() {
+            try {
+                const response = await fetch("/logs/recent");
+                const logs = await response.json();
+
+                const container = document.getElementById("logContainer");
+                container.innerHTML = "";
+
+                logs.forEach(log => {
+                    const levelClass = log.level.replace(/ /g, '-');
+                    const entry = document.createElement("div");
+                    entry.className = "log-entry";
+                    entry.innerHTML = `
+                        <div class="timestamp">${new Date(log.time).toLocaleString()}</div>
+                        <div class="level ${levelClass}">${log.level}</div>
+                        <div><strong>Log:</strong> ${log.log}</div>
+                        <div><strong>Category:</strong> ${log.category}</div>
+                        <div><strong>Severity:</strong> ${log.severity}</div>
+                        <div><strong>Productivity:</strong> ${log.category_type}</div>
+                        <div><strong>IP:</strong> ${log.ip}</div>
+                        <div><strong>URL:</strong> ${log.url || "N/A"}</div>
+                    `;
+                    container.appendChild(entry);
+                });
+            } catch (err) {
+                document.getElementById("logContainer").innerText = "Failed to fetch logs.";
+            }
+        }
+
+        fetchLogs();
+        setInterval(fetchLogs, 15000); // Refresh every 15 seconds
+    </script>
+</body>
+</html>
