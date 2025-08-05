@@ -1,14 +1,1 @@
-<<<<<<< HEAD
-venv/
-__pycache__/
-*.pyc
 .env
-logs/
-node_modules/
-.next/
-.DS_Store
-*.log
-=======
-.envsiem-log-server/.env
-siem-log-server/venv/
->>>>>>> 2cff00d5b8b4df6189ddda8b52719f94def94ba3

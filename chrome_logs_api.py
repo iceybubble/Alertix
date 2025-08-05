@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 import os
 import re
 
-app = Flask(__name__)
+
 
 LOG_FILE_PATH = os.path.join("siem-log-server", "logs", "server.log")
 PRODUCTIVE_DOMAINS = ["mail.google.com", "docs.google.com", "calendar.google.com"]
