@@ -1,0 +1,6 @@
+# Ignore line endings in node_modules
+node_modules/* -text
+
+# Force LF for all other text files
+* text=auto eol=lf
+
