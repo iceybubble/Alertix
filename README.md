@@ -1,4 +1,4 @@
-# 🛡️ SIEM Log Generator
+
 
 A modular and extensible Security Information and Event Management (SIEM) log generator designed to simulate, collect, and store logs from various sources including Chrome, Outlook, Gmail, and Windows systems.
 
