@@ -3790,3 +3790,1159 @@ productivity: Productive
 threat_type: trojan
 severity: Medium
 2025-08-25 19:46:49,713 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 10:23:52,443 - INFO - Starting SIEM server
+2025-08-26 10:23:52,451 - INFO - Log file path: C:\Users\katha\OneDrive\Documents\SIEM Log Generator\siem-log-server\logs\server.log
+2025-08-26 10:23:57,259 - INFO - Starting SIEM server
+2025-08-26 10:23:57,262 - INFO - Log file path: C:\Users\katha\OneDrive\Documents\SIEM Log Generator\siem-log-server\logs\server.log
+2025-08-26 16:47:50,524 - INFO - log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Low
+2025-08-26 16:48:00,756 - ERROR - ⚠️ Failed to write to Elasticsearch: Connection timed out
+2025-08-26 16:48:11,992 - INFO - log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:48:16,137 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:48:45,513 - INFO - log: Tab updated: https://ukstudent.samarth.edu.in/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 16:48:46,054 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:49:33,644 - INFO - log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Low
+2025-08-26 16:49:33,980 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:49:49,031 - INFO - log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:49:49,335 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:50:12,874 - INFO - log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:50:12,887 - INFO - log: Tab updated: https://www.youtube.com/shorts/10qL0gcXzp4
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:50:13,098 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:50:13,528 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:51:20,377 - INFO - log: Tab updated: https://www.youtube.com/shorts/10qL0gcXzp4
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:51:20,380 - INFO - log: Tab updated: https://www.youtube.com/shorts/cLr35n52WAc
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:51:21,117 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:51:21,535 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:51:40,227 - INFO - log: Tab updated: https://www.youtube.com/shorts/cLr35n52WAc
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:51:40,492 - INFO - log: Tab updated: https://www.youtube.com/shorts/jUzQIrrxDrg
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:51:40,524 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:51:40,706 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:51:41,770 - INFO - log: Tab updated: https://www.youtube.com/shorts/jUzQIrrxDrg
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:51:41,920 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:51:42,036 - INFO - log: Tab updated: https://www.youtube.com/shorts/9MjMg-qG-7g
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:51:42,177 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:52:43,600 - INFO - log: Tab updated: https://www.youtube.com/shorts/9MjMg-qG-7g
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:52:43,851 - INFO - log: Tab updated: https://www.youtube.com/shorts/6t2wK9wdWcs
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:52:43,914 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:52:44,027 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:53:12,998 - INFO - log: Tab updated: https://www.youtube.com/shorts/6t2wK9wdWcs
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:53:13,140 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:53:13,922 - INFO - log: Tab updated: https://www.youtube.com/shorts/6t2wK9wdWcs
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:53:14,042 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:53:14,898 - INFO - log: Tab updated: https://www.youtube.com/shorts/vQGtakJTqjk
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:53:15,010 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:54:33,435 - INFO - log: Tab updated: https://www.youtube.com/shorts/vQGtakJTqjk
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:54:33,793 - INFO - log: Tab updated: https://www.youtube.com/shorts/xCWkFOMGj_g
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:54:33,824 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:54:34,031 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:54:51,634 - INFO - log: Tab updated: https://www.youtube.com/shorts/xCWkFOMGj_g
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:54:51,916 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:54:52,208 - INFO - log: Tab updated: https://www.youtube.com/shorts/xCWkFOMGj_g
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:54:52,348 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:54:52,941 - INFO - log: Tab updated: https://www.youtube.com/shorts/BOOhsT7oqQ4
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:54:53,038 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:55:24,830 - INFO - log: Tab updated: https://www.youtube.com/shorts/BOOhsT7oqQ4
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:55:24,977 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:55:25,093 - INFO - log: Tab updated: https://www.youtube.com/shorts/OMxPkyKz9CM
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Entertainment
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:55:25,224 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:56:59,898 - INFO - log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Low
+2025-08-26 16:57:00,291 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:57:08,622 - INFO - log: Tab updated: https://www.amazon.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Shopping
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:57:08,868 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:57:09,781 - INFO - log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Low
+2025-08-26 16:57:09,954 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:57:14,643 - INFO - log: Tab updated: https://www.google.com/search?q=instagram&oq=&gs_lcrp=EgZjaHJvbWUqCQgDECMYJxjqAjIMCAAQIxgnGOoCGK0GMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgFECMYJxjqAjIMCAYQIxgnGOoCGK0GMgwIBxAjGCcY6gIYrQbSAQwyNTY4MzkwMWowajeoAgiwAgHxBWjPM0vcdHY7&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Social Media
+productivity: Distractive
+threat_type: none
+severity: High
+2025-08-26 16:57:14,833 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:57:17,655 - INFO - log: Tab updated: https://www.instagram.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Social Media
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:57:17,836 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:57:18,378 - INFO - log: Tab updated: https://www.instagram.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Social Media
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:57:18,583 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:57:26,041 - INFO - log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Low
+2025-08-26 16:57:26,136 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:57:35,768 - INFO - log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Low
+2025-08-26 16:57:35,948 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:57:45,435 - INFO - log: Tab updated: https://www.ebay.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Shopping
+productivity: Distractive
+threat_type: none
+severity: Medium
+2025-08-26 16:57:45,675 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:57:48,375 - INFO - log: Tab updated: https://x.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 16:57:48,570 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:57:49,146 - INFO - log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Low
+2025-08-26 16:57:49,332 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:58:09,104 - INFO - log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Low
+2025-08-26 16:58:09,297 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:58:18,159 - INFO - log: Tab updated: https://chatgpt.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 16:58:18,393 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:58:18,928 - INFO - log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Low
+2025-08-26 16:58:19,117 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:58:26,571 - INFO - log: Tab updated: https://github.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Work
+productivity: Productive
+threat_type: none
+severity: Medium
+2025-08-26 16:58:26,759 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:58:29,954 - INFO - log: Tab updated: https://www.coursera.org/courseraplus?utm_medium=sem&utm_source=gg&utm_campaign=b2c_emea_x_coursera_ftcof_courseraplus_cx_dr_bau_gg_sem_bd-ex_s1_en_m_hyb_24-10_x&campaignid=21836581617&adgroupid=351685084750&device=c&keyword=coursera&matchtype=e&network=g&devicemodel=&creativeid=1449957450624&assetgroupid=&targetid=kwd-36262515261&extensionid=&placement=&gad_source=1&gad_campaignid=21836581617&gbraid=0AAAAADdKX6Z3MPZ7kONKZhi35pxeUEbIJ&gclid=CjwKCAjwtrXFBhBiEiwAEKen17--pwvgooNvv-VZk-wrNDizETIG5i5p9bN1HvBPMwE8xNSW5dStERoCfVcQAvD_BwE
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Education
+productivity: Productive
+threat_type: none
+severity: High
+2025-08-26 16:58:30,147 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:58:35,249 - INFO - log: Tab updated: https://chatgpt.com/c/68ad9a5f-d048-8325-a4df-f4a988515672
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 16:58:35,443 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 16:59:57,115 - INFO - log: Tab updated: https://chatgpt.com/c/68ac6d2e-f204-832d-a09c-04fc2ff954a1
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: c2
+severity: Medium
+2025-08-26 16:59:57,469 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:01:20,567 - INFO - log: Tab updated: http://localhost:5601/login?next=%2F
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:01:20,990 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:01:41,886 - INFO - log: Tab updated: http://localhost:5601/app/home
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:01:42,160 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:01:49,145 - INFO - log: Tab updated: http://localhost:5601/app/home#/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:01:49,335 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:04:50,177 - INFO - log: Tab updated: http://localhost:5601/app/visualize#/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:04:50,538 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:04:50,578 - INFO - log: Tab updated: http://localhost:5601/app/visualize#/?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-15m,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:04:50,807 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:05:02,580 - INFO - log: Tab updated: http://localhost:5601/app/lens#/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:05:02,756 - INFO - log: Tab updated: http://localhost:5601/app/lens#/?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-15m,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:05:02,758 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:05:02,881 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:08:58,329 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:08:58,476 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-15m,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:08:58,975 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:08:58,975 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:14:50,963 - INFO - log: Tab updated: http://localhost:5601/app/management
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:14:51,179 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:15:46,049 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:15:46,058 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:15:46,158 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:15:46,495 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:20:08,762 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices?includeHiddenIndices=true
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:20:09,164 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:21:24,362 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/templates
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:21:24,729 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:21:32,653 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/data_streams
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:21:32,774 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:21:39,573 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/component_templates
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:21:39,745 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:21:42,198 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/enrich_policies
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:21:42,369 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:21:43,950 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/component_templates
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:21:44,129 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:21:54,168 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:21:54,340 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:06,330 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/component_templates
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:06,515 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:06,737 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/enrich_policies
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:06,933 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:07,779 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/component_templates
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:07,870 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:08,025 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/data_streams
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:08,115 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:08,889 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/templates
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:09,135 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:10,139 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices?includeHiddenIndices=true
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:10,323 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:11,149 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:11,324 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:13,555 - INFO - log: Tab updated: http://localhost:5601/app/management
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:13,713 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:14,229 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-15m,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:14,403 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:29,702 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:30,096 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:33,495 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/244d6d48-6272-4f97-a147-db0bc10f023b?_a=(viewMode:edit)
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:33,732 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:33,758 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/244d6d48-6272-4f97-a147-db0bc10f023b
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:33,855 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:33,999 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/244d6d48-6272-4f97-a147-db0bc10f023b?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-15m,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:34,159 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:42,403 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:42,586 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:22:42,793 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-15m,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:22:42,876 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:23:48,140 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:23:48,518 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:28:35,226 - INFO - log: Tab updated: http://localhost:5601/app/management
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:28:35,645 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:28:37,506 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:28:37,595 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:28:37,858 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:28:37,963 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:32:05,732 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices/index_details?indexName=siemtrix-logs
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:32:06,202 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:32:30,499 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices/index_details?indexName=siemtrix-logs&tab=mappings
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:32:30,610 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:32:58,210 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices/index_details?indexName=siemtrix-logs&tab=settings
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:32:58,397 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:33:13,525 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices/index_details?indexName=siemtrix-logs&tab=stats
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:33:13,991 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:33:32,550 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices/index_details?indexName=siemtrix-logs&tab=overview
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:33:32,783 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:35:05,660 - INFO - log: Tab updated: http://localhost:5601/app/management/kibana/dataViews
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:35:05,896 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:36:00,848 - INFO - log: Tab updated: http://localhost:5601/app/management/kibana/dataViews/dataView/d2bc5c78-6952-4016-a71b-cb2fb7f2ce97
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:36:00,869 - INFO - log: Tab updated: http://localhost:5601/app/management/kibana/dataViews/patterns/d2bc5c78-6952-4016-a71b-cb2fb7f2ce97
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:36:01,002 - INFO - log: Tab updated: http://localhost:5601/app/management/kibana/dataViews/dataView/d2bc5c78-6952-4016-a71b-cb2fb7f2ce97#/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:36:01,073 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:36:01,085 - INFO - log: Tab updated: http://localhost:5601/app/management/kibana/dataViews/dataView/d2bc5c78-6952-4016-a71b-cb2fb7f2ce97#/?_a=(tab:indexedFields)
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:36:01,200 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:36:01,324 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:36:01,325 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:37:24,545 - INFO - log: Tab updated: http://localhost:5601/app/visualize#/?_g=(filters:!(),query:(language:kuery,query:''),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:37:24,934 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:41:33,599 - INFO - log: Tab updated: http://localhost:5601/app/visualize#/annotations
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:41:33,603 - INFO - log: Tab updated: http://localhost:5601/app/visualize#/annotations?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:41:33,901 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:41:33,901 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:41:36,963 - INFO - log: Tab updated: http://localhost:5601/app/visualize#/visualizations
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:41:36,965 - INFO - log: Tab updated: http://localhost:5601/app/visualize#/visualizations?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:41:37,138 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:41:37,186 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:41:47,174 - INFO - log: Tab updated: http://localhost:5601/app/visualize#/visualizations?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))&s=siemtrix-logs
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:41:47,257 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:41:53,162 - INFO - log: Tab updated: http://localhost:5601/app/visualize#/visualizations?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:41:53,341 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:43:07,601 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:43:07,932 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:43:26,407 - INFO - log: Tab updated: http://localhost:5601/app/management
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:43:26,600 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:43:37,090 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:43:37,125 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:43:37,280 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:43:37,354 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:43:53,239 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices?filter=siemtrix-logs
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:43:53,414 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:45:55,291 - INFO - log: Tab updated: http://localhost:5601/app/management/kibana/dataViews
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:45:55,382 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:47:52,443 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:47:52,926 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:49:39,231 - INFO - log: Tab updated: http://localhost:5601/app/management
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:49:39,610 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:49:41,584 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:49:41,615 - INFO - log: Tab updated: http://localhost:5601/app/management/data/index_management/indices
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:49:41,879 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:49:41,953 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:56:09,028 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:56:09,564 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:57:22,902 - INFO - log: Tab updated: http://localhost:5601/app/lens#/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:57:22,906 - INFO - log: Tab updated: http://localhost:5601/app/lens#/?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 17:57:23,112 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 17:57:23,344 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:00:35,273 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:00:35,660 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:01:20,473 - INFO - log: Tab updated: http://localhost:5601/app/management
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:01:20,599 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:02:13,928 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActions
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:02:14,098 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActions/rules
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:02:14,310 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:02:16,864 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:02:37,113 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActionsConnectors
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:02:37,313 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:02:37,374 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActionsConnectors/connectors
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:02:37,471 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:02:43,194 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActions
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:02:43,378 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:02:43,576 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActions/rules
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:02:43,660 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:02:46,306 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActionsConnectors
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:02:46,351 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActionsConnectors/connectors
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:02:46,479 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:02:46,578 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:03:44,613 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActionsAlerts
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:03:44,727 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:03:45,017 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActionsAlerts/?searchBarParams=(controlFilters:!(),filterControls:!(),filters:!(),kuery:%27%27,rangeFrom:now-1d,rangeTo:now)
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:03:45,153 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:03:48,536 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActionsAlerts/?searchBarParams=(controlFilters:!((meta:(disabled:!f,index:unified-alerts-dv,key:kibana.alert.status),query:(match_phrase:(kibana.alert.status:active)))),filterControls:!(),filters:!(),kuery:%27%27,rangeFrom:now-1d,rangeTo:now)
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:03:48,909 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:05:50,644 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActions/rules
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:05:50,737 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:05:53,643 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActions/logs
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:05:53,851 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:05:59,492 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActions/rules
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:05:59,668 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:06:27,856 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActionsConnectors
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:06:27,946 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:06:28,026 - INFO - log: Tab updated: http://localhost:5601/app/management/insightsAndAlerting/triggersActionsConnectors/connectors
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:06:28,180 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:07:14,930 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/244d6d48-6272-4f97-a147-db0bc10f023b?_a=(viewMode:edit)
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:07:15,327 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:07:15,473 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/244d6d48-6272-4f97-a147-db0bc10f023b
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:07:15,495 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/244d6d48-6272-4f97-a147-db0bc10f023b?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:07:15,575 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:07:15,660 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:11:11,480 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4?_a=(viewMode:edit)
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:11:11,611 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:11:11,628 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:11:11,632 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:11:12,032 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:11:12,033 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:11:25,261 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/244d6d48-6272-4f97-a147-db0bc10f023b?_a=(viewMode:edit)
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:11:25,469 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:11:25,513 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/244d6d48-6272-4f97-a147-db0bc10f023b
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:11:25,613 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:11:25,699 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/244d6d48-6272-4f97-a147-db0bc10f023b?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:11:25,786 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:16:08,731 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4?_a=(viewMode:edit)
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:16:08,735 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:16:08,742 - INFO - log: Tab updated: http://localhost:5601/app/dashboards#/view/febb2df9-e37c-415a-9865-a385a7251be4?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-1d,to:now))
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Other
+productivity: Neutral
+threat_type: none
+severity: Medium
+2025-08-26 18:16:09,159 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:16:09,555 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:16:09,556 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:32:49,343 - INFO - log: Tab updated: https://github.com/new
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Work
+productivity: Productive
+threat_type: none
+severity: Medium
+2025-08-26 18:32:50,068 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:33:36,477 - INFO - log: Tab updated: https://github.com/iceybubble/Alertix
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Work
+productivity: Productive
+threat_type: none
+severity: Medium
+2025-08-26 18:33:36,678 - INFO - ✅ Log successfully sent to Elasticsearch
+2025-08-26 18:33:37,055 - INFO - log: Tab updated: https://github.com/iceybubble/Alertix
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+category: Work
+productivity: Productive
+threat_type: none
+severity: Medium
+2025-08-26 18:33:37,248 - INFO - ✅ Log successfully sent to Elasticsearch
