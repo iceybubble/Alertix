@@ -1,135 +1,131 @@
-Alertix 🚀
+# 🚀 Alertix
 
-Real-Time Log Monitoring & Alert Dashboard
+## Real-Time Log Monitoring & Alert Dashboard
 
-Alertix is a real-time log monitoring and alert system designed to help users visualize activities, track productive vs. distractive time, and receive critical alerts. It collects logs, categorizes them by type and severity, and displays insights through interactive Kibana dashboards.
+*Alertix* is a comprehensive, open-source real-time log monitoring and alerting system engineered to deliver in-depth insights into your online activities, productivity patterns, and emerging security threats.  
 
-Features
+By aggregating logs from diverse sources such as browsers, email clients, and local applications, Alertix:
 
-Log Collection: Python server collects logs from multiple sources.
+- Categorizes activities
+- Assesses their severity
+- Presents the data via dynamic, interactive dashboards in *Kibana*
 
-Categorization: Activities are classified into categories such as Work, Study, Entertainment, News, Finance, Shopping, Adult, and Social Media.
+This tool empowers users to enhance productivity, identify distractions, and mitigate risks like suspicious IP accesses or unauthorized content exposure.  
 
-Severity Levels:
+Ideal for individuals, teams, or organizations focused on *time management, **cybersecurity, and **data-driven decision-making*, Alertix transforms raw log data into actionable intelligence.
 
-Low → Work, Education (productive)
+> In today's digital landscape, where distractions abound and cyber threats evolve rapidly, *Alertix* stands as a vigilant guardian.
 
-Medium → Social Media, Shopping
+Whether you're a *student, **professional, or **security analyst*, Alertix provides the transparency and tools needed to stay ahead.
 
-High → Entertainment, Gaming
+---
 
-Critical → Adult content, suspicious IPs, possible exploits
+## 🌟 Motivation
 
-Visualizations:
+In an era of constant connectivity, it's challenging to maintain focus and security online.
 
-Bar charts for severity distribution
+### Why Alertix?
 
-Line charts for critical events over time
+- 📊 *Visualize Time Usage:* Productive vs. distractive time
+- 🛡 *Detect Risks:* Adult content, suspicious IPs
+- ⚠ *Enable Real-Time Action:* Immediate alerts
+- 💡 *Promote Better Habits:* Improve digital behaviors
 
-Data tables for top suspicious IPs
+By leveraging *open-source technologies*, Alertix ensures accessibility, customizability, and community-driven enhancements.
 
-Pie charts for activity categories
+---
 
-Productive vs. distractive time comparison
+## ✨ Features
 
-Real-Time Alerts: Trigger notifications for critical activities.
+### ✅ Multi-Source Log Collection
 
-Tech Stack
+- Logs from:
+  - Browser extensions (e.g., Chrome URL logger)
+  - Email clients (Gmail, Outlook)
+  - Local applications
+  - SIEM generators
+- *Real-time ingestion* for up-to-the-minute insights
 
-Python 3.x – Server and log processing
+### 🧠 Advanced Activity Categorization
 
-Elasticsearch – Log storage and querying
+- Categories:
+  - *Productive:* Work, Study, Education
+  - *Neutral:* News, Finance, Shopping, Social Media
+  - *Distractive:* Entertainment, Gaming
+  - *Risky/Critical:* Adult Content, Suspicious IPs
+- Customizable category rules
 
-Kibana – Interactive dashboards and visualizations
+### 🔥 Severity Assessment
 
-Installation
-1️⃣ Clone the repository
-git clone https://github.com/iceybubble/Alertix.git
-cd Alertix
+| Severity  | Description            | Examples                   | Color Code  |
+|----------|------------------------|----------------------------|-------------|
+| Low      | Productive activities  | Work emails, study sites   | ✅ Green     |
+| Medium   | Mild distractions      | News, shopping, social     | 🟡 Yellow    |
+| High     | Strong distractions    | Gaming, entertainment      | ⚠ Orange     |
+| Critical | Security threats       | Adult sites, unknown IPs   | 🛑 Red       |
 
-2️⃣ Install Python dependencies
-pip install -r requirements.txt
+---
 
+### 📊 Interactive Visualizations (via Kibana)
 
-Make sure you have Python 3.x installed.
+- Bar Charts: Severity distribution
+- Line Charts: Critical events over time
+- Data Tables: Suspicious IPs, frequency
+- Pie Charts: Activity breakdown
+- *Heatmaps* (🆕): Productive vs distractive time by day/week
+- Area Charts: Category comparison over time
+- *Gauge Charts*: Productivity score (e.g., 75%)
 
-3️⃣ Run Elasticsearch & Kibana
+➡ *Custom Dashboards:* Create personalized views.
 
-Elasticsearch:
-Navigate to your Elasticsearch folder:
+---
 
-./bin/elasticsearch   # Linux/macOS
-elasticsearch.bat     # Windows
+### 📈 Productivity Analytics
 
+- Aggregated time allocation reports
+- Benchmark vs. goals (e.g., 80% productive time)
 
-Open: http://localhost:9200
+### 🔔 Real-Time Alerting System
 
-Kibana:
-Navigate to your Kibana folder:
+- Alerts via Email/SMS
+- Custom thresholds (e.g., alert if distraction > 2 hrs)
 
-./bin/kibana   # Linux/macOS
-kibana.bat     # Windows
+### 🔌 Extensibility
 
+- Plugin architecture for new log sources
+- Integrate with external SIEMs (enterprise use)
 
-Open: http://localhost:5601
+---
 
-4️⃣ Run the Python server
-python server.py
+## 🛠 Tech Stack
 
-
-The server collects logs and pushes them to Elasticsearch.
-
-Usage
-
-Open Kibana at http://localhost:5601
-
-Create an index pattern for your logs (e.g., logs)
-
-Explore your dashboards:
-
-Bar chart → Severity distribution
-
-Line chart → Critical events over time
-
-Data table → Top suspicious IPs
-
-Pie chart → Activity categories
-
-Productive vs. distractive time visualization
-
-Alerts trigger automatically for Critical severity activities.
-
-
-
-How It Works
-
-Log Generation: The Python server receives activity logs.
-
-Categorization & Severity: Logs are classified by type and assigned a severity.
-
-Storage: Logs are indexed into Elasticsearch.
-
-Visualization: Kibana visualizes the data through charts and tables.
-
-
-Contributing
-
-Contributions are welcome!
-
-
-Fork the repository
-
-Create a new branch (git checkout -b feature-name)
-
-Make your changes
-
-Commit (git commit -m "Add feature")
-
-Push (git push origin feature-name)
-
-Open a Pull Request
-
-
-License
-
-This project is licensed under the MIT License.
+- *Python 3.x*: Log processing, Elasticsearch integration
+- *Elasticsearch 7.x+*: Search & analytics engine
+- *Kibana 7.x+*: Dashboard & alerting UI
+- *SIEM Tools*: Simulated log generators
+- *Browser Extensions*: Chrome API for URL logging
+- *Email Agents*: Gmail & Outlook listeners
+- *Databases*: SQLite / PostgreSQL
+
+---
+
+## 📂 Folder Structure
+
+```plaintext
+Alertix/
+├── .vscode/                  # VS Code settings
+├── SIEM-Log-Generator/       # Simulated SIEM logs
+├── chrome-url-logger/        # Browser URL tracking
+├── email-gmail-agent/        # Gmail monitoring
+├── local-log-agent/          # Local log collector
+├── siem-log-server/          # SIEM log ingestion
+├── check_processes.py        # Monitor running processes
+├── chrome_bgs_api.py         # Chrome API integration
+├── clear_logs.sh             # Log cleanup script
+├── database.py               # DB utilities
+├── gmail_extension_listener.py # Gmail listener
+├── outlook_desktop_agent.py  # Outlook agent
+├── render.yaml               # Render.com deploy config
+├── requirements.txt          # Python dependencies
+├── server.py                 # Main Python server
+├── umcorn.jpg                # Logo/image (possibly 'unicorn.jpg')
