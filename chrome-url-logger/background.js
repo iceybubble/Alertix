@@ -1,25 +1,39 @@
-chrome.runtime.onInstalled.addListener(() => {
-  console.log("Extension installed");
-  sendLog("Extension installed");
-});
+// background.js - inside chrome-url-logger/
+const SERVER_URL = "http://localhost:5000/log";  // your main server.py
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (changeInfo.status === 'complete' && tab.url) {
-    const message = `Tab updated: ${tab.url}`;
-    console.log(message);
-    sendLog(message, tab.url);
+  if (changeInfo.status === "complete" && tab.url) {
+    // Skip internal chrome:// pages
+    if (tab.url.startsWith("chrome://") || tab.url.startsWith("chrome-extension://")) return;
+
+    fetch(SERVER_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        log: `Tab updated: ${tab.url}`,
+        level: "INFO",
+        source: "chrome-extension",
+        url: tab.url,
+        title: tab.title || ""
+      })
+    }).catch(err => console.error("Alertix log error:", err));
   }
 });
 
-function sendLog(message, url = null) {
-  const payload = { log: message };
-  if (url) {
-    payload.url = url;
-  }
+chrome.tabs.onActivated.addListener((activeInfo) => {
+  chrome.tabs.get(activeInfo.tabId, (tab) => {
+    if (!tab.url || tab.url.startsWith("chrome://")) return;
 
-  fetch('http://localhost:5000/log', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
-  }).catch(err => console.error("Error sending log:", err));
-}
+    fetch(SERVER_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        log: `Tab activated: ${tab.url}`,
+        level: "INFO",
+        source: "chrome-extension",
+        url: tab.url,
+        title: tab.title || ""
+      })
+    }).catch(err => console.error("Alertix log error:", err));
+  });
+});

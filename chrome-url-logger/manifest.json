@@ -1,19 +1,17 @@
 {
   "manifest_version": 3,
-  "name": "Chrome Logger",
+  "name": "Alertix URL Logger",
   "version": "1.0",
-  "description": "Logs browser events to a Flask server",
+  "description": "Logs visited URLs to Alertix SIEM",
   "permissions": [
-    "tabs"
+    "tabs",
+    "activeTab"
   ],
   "host_permissions": [
-    "http://localhost:5000/",
-    "<all_urls>"
+    "http://localhost:5000/*",
+    "http://127.0.0.1:5000/*"
   ],
   "background": {
     "service_worker": "background.js"
-  },
-  "action": {
-    "default_title": "Chrome Logger Active"
   }
 }

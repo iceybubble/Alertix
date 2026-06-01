@@ -203,8 +203,24 @@ def receive_log():
     threat_type = detect_threat_type(log_message)
     severity = score_severity(log_level, log_message, category)
 
-    log_entry = {
-        "timestamp": utcnow(),
+    now = utcnow()
+
+    #  ES-safe document: datetime as ISO string, no ObjectId
+    es_entry = {
+        "timestamp": now.isoformat(),        # ISO string, not datetime object
+        "source": source,
+        "log": log_message,
+        "level": log_level,
+        "ip": request.remote_addr,
+        "category": category,
+        "productivity": productivity,
+        "threat_type": threat_type,
+        "severity": severity
+    }
+
+    #  Separate MongoDB document: datetime object is fine for Mongo
+    mongo_entry = {
+        "timestamp": now,                    # datetime object is fine here
         "source": source,
         "log": log_message,
         "level": log_level,
@@ -217,19 +233,23 @@ def receive_log():
 
     if mongo_logs is not None:
         try:
-            mongo_logs.insert_one(log_entry)
+            mongo_logs.insert_one(mongo_entry)  # mutates mongo_entry, NOT es_entry
         except Exception as e:
             app.logger.error(f"MongoDB error: {e}")
 
     if es is not None:
         try:
-            es.index(index=INDEX_NAME, document=log_entry)
+            es.index(index=INDEX_NAME, document=es_entry)  # clean dict, no ObjectId
         except Exception as e:
             app.logger.error(f"ES error: {e}")
 
     return jsonify({
         "status": "logged",
-        "analysis": {"category": category, "productivity": productivity, "severity": severity}
+        "analysis": {
+            "category": category,
+            "productivity": productivity,
+            "severity": severity
+        }
     })
 
 @app.route("/stats/summary")
