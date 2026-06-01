@@ -1,6 +1,6 @@
 services:
   mongodb:
-    image: mongo:7.0
+    image: mongo:7.0-alpine
     container_name: alertix-mongodb
     ports:
       - "27017:27017"
@@ -9,25 +9,23 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: admin123
     volumes:
       - mongodb_data:/data/db
-    networks:
-      - alertix-network
+    restart: always
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+    image: elasticsearch:8.9.0
     container_name: alertix-elasticsearch
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=false
-      - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ports:
       - "9200:9200"
     volumes:
       - elasticsearch_data:/usr/share/elasticsearch/data
-    networks:
-      - alertix-network
+    restart: always
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.17.0
+    image: kibana:8.9.0
     container_name: alertix-kibana
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
@@ -36,13 +34,8 @@ services:
       - "5601:5601"
     depends_on:
       - elasticsearch
-    networks:
-      - alertix-network
+    restart: always
 
 volumes:
   mongodb_data:
   elasticsearch_data:
-
-networks:
-  alertix-network:
-    driver: bridge

@@ -1,6 +1,3 @@
-# Add this at the very top of the file, after imports
-# type: ignore
-
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 from elasticsearch import Elasticsearch
@@ -58,14 +55,11 @@ app.logger.info(f" Log file path: {log_file_path.resolve()}")
 # ---- Elasticsearch Setup ----
 ES_HOST = os.getenv("ELASTICSEARCH_HOST", "localhost")
 ES_PORT = os.getenv("ELASTICSEARCH_PORT", "9200")
-ES_USER = os.getenv("ELASTICSEARCH_USER", "elastic")
-ES_PASSWORD = os.getenv("ELASTICSEARCH_PASSWORD", "a7AUn2fk5sluS3so8q8f")
 
 es = None
 try:
     es = Elasticsearch(
-        [f"https://{ES_HOST}:{ES_PORT}"],
-        basic_auth=(ES_USER, ES_PASSWORD),
+        [f"http://{ES_HOST}:{ES_PORT}"],
         verify_certs=False
     )
     es_info = es.info()
@@ -76,7 +70,7 @@ except Exception as e:
 INDEX_NAME = "alertix-logs"
 
 # ---- MongoDB Setup ----
-MONGO_URI = os.getenv("MONGODB_URI", "mongodb://admin:admin123@localhost:27017/?authSource=admin")
+MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
 MONGO_DB = os.getenv("MONGO_DB_NAME", "alertix_db")
 
 mongo_client = None
@@ -86,7 +80,7 @@ try:
     mongo_client = MongoClient(MONGO_URI)
     mongo_db = mongo_client[MONGO_DB]
     mongo_logs = mongo_db["activity_logs"]
-    
+
     mongo_client.admin.command('ping')
     app.logger.info(f" Connected to MongoDB: {MONGO_DB}")
 except Exception as e:
@@ -159,17 +153,17 @@ def detect_threat_type(message):
 def score_severity(log_level, message, category):
     m = message.lower()
     chosen = "Low"
-    
+
     for level in SEVERITY_ORDER[::-1]:
         if any(k in m for k in SEVERITY_KEYWORDS[level]):
             chosen = level
             break
-    
+
     if any(re.search(p, m) for p in IOC_PATTERNS):
         idx = SEVERITY_ORDER.index(chosen)
         if idx < SEVERITY_ORDER.index("Medium"):
             chosen = "Medium"
-    
+
     lvl = (log_level or "").upper()
     if lvl in ("CRITICAL", "FATAL"):
         chosen = "Critical"
@@ -177,7 +171,7 @@ def score_severity(log_level, message, category):
         idx = SEVERITY_ORDER.index(chosen)
         if idx < SEVERITY_ORDER.index("High"):
             chosen = "High"
-    
+
     return chosen
 
 def utcnow():
@@ -189,8 +183,8 @@ def utcnow():
 def home():
     return jsonify({
         "status": " Alertix SIEM Server running",
-        "elasticsearch": " Connected" if es else " Not Connected",
-        "mongodb": " Connected" if mongo_client else " Not Connected"
+        "elasticsearch": " Connected" if es is not None else " Not Connected",
+        "mongodb": " Connected" if mongo_client is not None else " Not Connected"
     })
 
 @app.route("/health")
@@ -221,13 +215,13 @@ def receive_log():
         "severity": severity
     }
 
-    if mongo_logs:
+    if mongo_logs is not None:
         try:
             mongo_logs.insert_one(log_entry)
         except Exception as e:
             app.logger.error(f"MongoDB error: {e}")
 
-    if es:
+    if es is not None:
         try:
             es.index(index=INDEX_NAME, document=log_entry)
         except Exception as e:
@@ -240,31 +234,31 @@ def receive_log():
 
 @app.route("/stats/summary")
 def stats_summary():
-    if not es:
+    if es is None:
         return jsonify({"error": "ES not connected"}), 503
-    
+
     hours = int(request.args.get("hours", 24))
-    body = {
-        "query": {"range": {"timestamp": {"gte": f"now-{hours}h"}}},
-        "size": 0,
-        "aggs": {
-            "by_productivity": {"terms": {"field": "productivity.keyword"}},
-            "by_category": {"terms": {"field": "category.keyword"}},
-            "by_severity": {"terms": {"field": "severity.keyword"}}
-        }
-    }
-    
+
     try:
-        res = es.search(index=INDEX_NAME, body=body)
+        res = es.search(
+            index=INDEX_NAME,
+            query={"range": {"timestamp": {"gte": f"now-{hours}h"}}},
+            size=0,
+            aggs={
+                "by_productivity": {"terms": {"field": "productivity.keyword"}},
+                "by_category":     {"terms": {"field": "category.keyword"}},
+                "by_severity":     {"terms": {"field": "severity.keyword"}}
+            }
+        )
         return jsonify({"data": res["aggregations"]})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
 @app.route("/stats/productivity")
 def productivity_stats():
-    if not mongo_logs:
+    if mongo_logs is None:
         return jsonify({"error": "MongoDB not connected"}), 503
-    
+
     try:
         pipeline = [{"$group": {"_id": "$productivity", "count": {"$sum": 1}}}]
         stats = list(mongo_logs.aggregate(pipeline))
@@ -274,9 +268,9 @@ def productivity_stats():
 
 @app.route("/logs/recent")
 def recent_logs():
-    if not mongo_logs:
+    if mongo_logs is None:
         return jsonify({"error": "MongoDB not connected"}), 503
-    
+
     try:
         logs = list(mongo_logs.find().sort("timestamp", -1).limit(20))
         for log in logs:
@@ -288,25 +282,24 @@ def recent_logs():
 
 @app.route("/charts/productivity.png")
 def productivity_pie():
-    if not es:
+    if es is None:
         return jsonify({"error": "ES not connected"}), 503
-    
-    body = {
-        "query": {"range": {"timestamp": {"gte": "now-24h"}}},
-        "size": 0,
-        "aggs": {"by_productivity": {"terms": {"field": "productivity.keyword"}}}
-    }
-    
+
     try:
-        res = es.search(index=INDEX_NAME, body=body)
+        res = es.search(
+            index=INDEX_NAME,
+            query={"range": {"timestamp": {"gte": "now-24h"}}},
+            size=0,
+            aggs={"by_productivity": {"terms": {"field": "productivity.keyword"}}}
+        )
         buckets = res["aggregations"]["by_productivity"]["buckets"]
         labels = [b["key"] for b in buckets]
         sizes = [b["doc_count"] for b in buckets]
-        
+
         fig = plt.figure(figsize=(8, 6))
         plt.pie(sizes, labels=labels, autopct="%1.1f%%")
         plt.title("Productivity")
-        
+
         buf = io.BytesIO()
         fig.savefig(buf, format="png")
         plt.close(fig)
