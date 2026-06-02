@@ -12,7 +12,7 @@ HOW TO RUN:
     # On Windows also install: pip install pywin32
     # Optional env vars:
     #   ALERTIX_SERVER=http://127.0.0.1:5000/log
-    #   AGENT_POLL_SECS=5
+    #   AGENT_POLL_SECS=30
 """
 
 import os
@@ -119,7 +119,7 @@ def run_macos(state: dict):
             ["log", "show", "--last", f"{POLL_SECS}s",
              "--predicate", "eventType == logEvent",
              "--style", "compact"],
-            capture_output=True, text=True, timeout=10
+            capture_output=True, text=True, timeout=30
         )
         for line in result.stdout.splitlines():
             if line.strip():

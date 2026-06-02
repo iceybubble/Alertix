@@ -11,7 +11,7 @@ HOW TO RUN:
 
     # Optional env vars:
     #   ALERTIX_SERVER=http://127.0.0.1:5000/log
-    #   NETWORK_SCAN_SECS=10
+    #   NETWORK_SCAN_SECS=30
 
 What it detects:
   - Connections to known malicious IPs / Tor exit nodes
@@ -34,7 +34,7 @@ from typing import Any
 
 SERVER_URL       = os.getenv("ALERTIX_SERVER", "http://127.0.0.1:5000/log")
 AGENT_NAME       = "network-agent"
-SCAN_SECS        = int(os.getenv("NETWORK_SCAN_SECS", "10"))
+SCAN_SECS        = int(os.getenv("NETWORK_SCAN_SECS", "30"))
 
 logging.basicConfig(
     level=logging.INFO,
