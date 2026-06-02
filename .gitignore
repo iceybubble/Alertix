@@ -19,3 +19,7 @@ yarn-error.log*
 # Logs
 logs/
 *.log
+.env
+logs/
+__pycache__/
+.venv/
