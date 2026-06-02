@@ -77,17 +77,18 @@ Alertix bridges this gap by offering an open-source, lightweight alternative. It
 +------------------------+                               +------------------------+
 | MONGODB COMPASS VIEWER |                               |   KIBANA DASHBOARD     |
 +------------------------+                               +------------------------+
+```
 
 ## 
 **1. Central SIEM Engine (server.py)**
 
 Exposes a single high-throughput POST endpoint (/log). 
 
-The server acts as an analysis funnel:Deterministic Categorization: Runs incoming strings against optimized categorical arrays (Work, Education, Security, Cloud, Entertainment, Social Media, Shopping, Gaming, Adult, News, Finance, Other).
+- The server acts as an analysis funnel:Deterministic Categorization: Runs incoming strings against optimized categorical arrays (Work, Education, Security, Cloud, Entertainment, Social Media, Shopping, Gaming, Adult, News, Finance, Other).
 
-Productivity Profiling: Translates active groups into high-level vectors: Productive (engineering, administration, learning), Distractive (non-business vectors), or Neutral.
+- Productivity Profiling: Translates active groups into high-level vectors: Productive (engineering, administration, learning), Distractive (non-business vectors), or Neutral.
 
-Dynamic Severity Calculations: Evaluates payload parameters using an ordered array progression (Low $\rightarrow$ Medium $\rightarrow$ High $\rightarrow$ Critical) using string keywords and Indicators of Compromise (IOC) regular expression logic.
+- Dynamic Severity Calculations: Evaluates payload parameters using an ordered array progression (Low $\rightarrow$ Medium $\rightarrow$ High $\rightarrow$ Critical) using string keywords and Indicators of Compromise (IOC) regular expression logic.
 
 ##
 
@@ -163,7 +164,7 @@ Alertix/
 
 **Installation & Complete Setup Guide**
 
-Prerequisites
+**Prerequisites**
 
 Before deployment, verify that your host machine has the following packages properly installed:
 
@@ -178,6 +179,7 @@ Open your host machine terminal and check out the code space:
 
 ```
 git clone [https://github.com/iceybubble/Alertix.git](https://github.com/iceybubble/Alertix.git)
+
 cd Alertix
 ```
 
