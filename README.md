@@ -78,6 +78,7 @@ Alertix bridges this gap by offering an open-source, lightweight alternative. It
 | MONGODB COMPASS VIEWER |                               |   KIBANA DASHBOARD     |
 +------------------------+                               +------------------------+
 ```
+##
 
 ## 
 **1. Central SIEM Engine (server.py)**
