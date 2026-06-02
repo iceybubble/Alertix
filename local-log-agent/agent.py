@@ -1,104 +1,211 @@
-import win32evtlog
-import json
-import requests
-import time
+"""
+Alertix - local-log-agent/agent.py
+=====================================
+Monitors local system logs (Linux/macOS/Windows) and forwards events
+to the Alertix SIEM server in real time.
+
+HOW TO RUN:
+    cd local-log-agent
+    pip install requests psutil
+    python agent.py
+
+    # On Windows also install: pip install pywin32
+    # Optional env vars:
+    #   ALERTIX_SERVER=http://127.0.0.1:5000/log
+    #   AGENT_POLL_SECS=5
+"""
+
 import os
-from datetime import datetime
-
-import ctypes
 import sys
+import time
+import platform
+import logging
+import requests
+from pathlib import Path
+from typing import Any
 
-def is_admin():
+# Use TYPE_CHECKING or fallback imports to resolve Pylance 'missing module' warnings safely
+try:
+    import win32evtlog  # type: ignore
+    import win32con     # type: ignore
+    WIN32_AVAILABLE = True
+except ImportError:
+    WIN32_AVAILABLE = False
+    win32evtlog: Any = object
+    win32con: Any = object
+
+SERVER_URL = os.getenv("ALERTIX_SERVER", "http://127.0.0.1:5000/log")
+POLL_SECS  = int(os.getenv("AGENT_POLL_SECS", "5"))
+AGENT_NAME = "local-log-agent"
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [agent] %(levelname)s %(message)s"
+)
+
+OS = platform.system()   # "Windows" | "Linux" | "Darwin"
+
+
+# ── Send helper 
+def send_log(message: str, level: str = "INFO"):
+    """POST one log entry to the Alertix SIEM server."""
     try:
-        return ctypes.windll.shell32.IsUserAnAdmin()
-    except:
-        return False
+        r = requests.post(
+            SERVER_URL,
+            json={"log": message, "level": level, "source": AGENT_NAME},
+            timeout=5
+        )
+        if r.status_code != 200:
+            logging.warning(f"Server returned {r.status_code}: {r.text[:100]}")
+    except requests.exceptions.ConnectionError:
+        logging.error("Cannot reach Alertix server. Is server.py running?")
+    except Exception as e:
+        logging.error(f"send_log error: {e}")
 
-if not is_admin():
-    print("[!] This script requires administrator privileges. Please run as Administrator.")
-    sys.exit(1)
+
+# ── File tail helper 
+def tail_file(path: str, state: dict) -> list:
+    """Return new lines added to a log file since last call."""
+    lines = []
+    try:
+        with open(path, "r", encoding="utf-8", errors="replace") as f:
+            f.seek(state.get(path, 0))
+            new_lines = f.readlines()
+            state[path] = f.tell()
+        lines = [l.strip() for l in new_lines if l.strip()]
+    except (FileNotFoundError, PermissionError):
+        pass
+    return lines
 
 
-# Configuration
-SERVER = 'localhost'
-LOG_TYPE = 'Security'
-SIEM_ENDPOINT = "http://localhost:5000/log"
-LOG_DIR = "logs"
-LOG_FILE = os.path.join(LOG_DIR, "windows_logs.jsonl")
-LAST_RECORD_FILE = os.path.join(LOG_DIR, "last_record.txt")
+# ── Linux / macOS file-based monitoring
+LINUX_LOGS = [
+    "/var/log/auth.log",           # SSH logins, sudo, PAM
+    "/var/log/syslog",             # General system
+    "/var/log/kern.log",           # Kernel
+    "/var/log/ufw.log",            # Firewall (Ubuntu)
+    "/var/log/apache2/access.log", # Apache (if running)
+    "/var/log/nginx/access.log",   # Nginx (if running)
+    "/var/log/secure",             # RHEL/CentOS auth
+    "/var/log/messages",           # RHEL/CentOS general
+]
 
-def get_last_record_number():
-    if os.path.exists(LAST_RECORD_FILE):
-        with open(LAST_RECORD_FILE, "r") as f:
+CRIT_HINTS = [
+    "FAILED", "Invalid user", "authentication failure",
+    "sudo:", "segfault", "kernel panic", "OOM killer",
+    "permission denied", "unauthorized", "BREAK-IN ATTEMPT"
+]
+HIGH_HINTS = ["error", "denied", "refused", "blocked", "intrusion", "warning"]
+
+
+def run_linux(state: dict):
+    for path in LINUX_LOGS:
+        for line in tail_file(path, state):
+            u = line.upper()
+            if any(h.upper() in u for h in CRIT_HINTS):
+                lvl = "ERROR"
+            elif any(h.upper() in u for h in HIGH_HINTS):
+                lvl = "WARNING"
+            else:
+                lvl = "INFO"
+            send_log(f"[{Path(path).name}] {line}", lvl)
+
+
+# ── macOS unified log 
+def run_macos(state: dict):
+    import subprocess
+    try:
+        result = subprocess.run(
+            ["log", "show", "--last", f"{POLL_SECS}s",
+             "--predicate", "eventType == logEvent",
+             "--style", "compact"],
+            capture_output=True, text=True, timeout=10
+        )
+        for line in result.stdout.splitlines():
+            if line.strip():
+                send_log(f"[macOS/log] {line.strip()}", "INFO")
+    except Exception:
+        run_linux(state)   # fallback to file tailing
+
+
+# ── Windows Event Log 
+def run_windows(state: dict):
+    if not WIN32_AVAILABLE:
+        logging.error("pywin32 missing. Run: pip install pywin32")
+        return
+
+    for channel in ["Security", "System", "Application"]:
+        try:
+            h = win32evtlog.OpenEventLog(None, channel)
+            flags = (win32evtlog.EVENTLOG_BACKWARDS_READ |
+                     win32evtlog.EVENTLOG_SEQUENTIAL_READ)
+            events = win32evtlog.ReadEventLog(h, flags, 0)
+            win32evtlog.CloseEventLog(h)
+
+            for ev in events[:50]:   # last 50 per channel per poll
+                msg = str(ev.StringInserts or "")[:200]
+                eid = ev.EventID & 0xFFFF
+                lvl = ("ERROR"
+                       if ev.EventType in (win32con.EVENTLOG_ERROR_TYPE,
+                                           win32con.EVENTLOG_WARNING_TYPE)
+                       else "INFO")
+                send_log(f"[WinEvent/{channel}] EventID={eid} {msg}", lvl)
+        except Exception as e:
+            logging.error(f"WinEvent {channel}: {e}")
+
+
+# ── Process monitor (cross-platform, needs psutil) 
+SUSPICIOUS_PROCS = [
+    "nc", "ncat", "netcat", "nmap", "wireshark", "tcpdump",
+    "mimikatz", "meterpreter", "cobaltstrike",
+    "powershell", "cmd.exe", "wscript", "cscript",
+]
+
+
+def monitor_processes():
+    """Detect and log suspicious processes."""
+    try:
+        import psutil
+        for proc in psutil.process_iter(["pid", "name", "username", "cmdline"]):
             try:
-                return int(f.read().strip())
-            except:
-                return 0
-    return 0
+                name = (proc.info["name"] or "").lower()
+                if any(s in name for s in SUSPICIOUS_PROCS):
+                    cmd = " ".join(proc.info["cmdline"] or [])[:200]
+                    send_log(
+                        f"[process] pid={proc.info['pid']} "
+                        f"name={proc.info['name']} "
+                        f"user={proc.info['username']} cmd={cmd}",
+                        "WARNING"
+                    )
+            except (psutil.NoSuchProcess, psutil.AccessDenied):
+                pass
+    except ImportError:
+        pass   # psutil is optional
 
-def set_last_record_number(number):
-    with open(LAST_RECORD_FILE, "w") as f:
-        f.write(str(number))
 
-def fetch_logs(since_record):
-    hand = win32evtlog.OpenEventLog(SERVER, LOG_TYPE)
-    flags = win32evtlog.EVENTLOG_SEQUENTIAL_READ | win32evtlog.EVENTLOG_FORWARDS_READ
-    logs = []
-    max_record = since_record
+# ── Main loop 
+def main():
+    logging.info(f"Alertix Local Agent v1.0 (OS={OS}, server={SERVER_URL})")
+    send_log(f"Agent started on {OS} host: {platform.node()}", "INFO")
+
+    state: dict = {}   # tracks file read offsets
 
     while True:
-        events = win32evtlog.ReadEventLog(hand, flags, 0)
-        if not events:
-            break
-        for ev_obj in events:
-            if ev_obj.RecordNumber <= since_record:
-                continue
-            try:
-                log_data = {
-                    'event_id': ev_obj.EventID,
-                    'source_name': ev_obj.SourceName,
-                    'time_generated': str(ev_obj.TimeGenerated),
-                    'event_type': ev_obj.EventType,
-                    'event_category': ev_obj.EventCategory,
-                    'computer_name': ev_obj.ComputerName,
-                    'string_inserts': ev_obj.StringInserts,
-                    'record_number': ev_obj.RecordNumber
-                }
-                logs.append(log_data)
-                if ev_obj.RecordNumber > max_record:
-                    max_record = ev_obj.RecordNumber
-            except:
-                pass
-    return logs, max_record
+        try:
+            if   OS == "Windows": run_windows(state)
+            elif OS == "Darwin":  run_macos(state)
+            else:                 run_linux(state)
 
-def send_logs(logs):
-    try:
-        requests.get("http://localhost:5000", timeout=2)
-        for log in logs:
-            try:
-                requests.post(SIEM_ENDPOINT, json=log, timeout=2)
-            except:
-                pass
-    except:
-        pass
+            monitor_processes()
 
-def save_logs_to_file(logs):
-    if not logs:
-        return
-    os.makedirs(LOG_DIR, exist_ok=True)
-    with open(LOG_FILE, "a", encoding='utf-8') as f:
-        for log in logs:
-            f.write(json.dumps(log) + "\n")
+        except KeyboardInterrupt:
+            logging.info("Agent stopped by user.")
+            sys.exit(0)
+        except Exception as e:
+            logging.error(f"Agent loop error: {e}")
 
-def main():
-    print("[*] Starting Windows Log Agent")
-    os.makedirs(LOG_DIR, exist_ok=True)
-    time.sleep(5)  # Optional buffer for server start
-    last_record = get_last_record_number()
-    logs, new_record = fetch_logs(last_record)
-    send_logs(logs)
-    save_logs_to_file(logs)
-    set_last_record_number(new_record)
+        time.sleep(POLL_SECS)
+
 
 if __name__ == "__main__":
     main()

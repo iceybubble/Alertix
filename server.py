@@ -8,6 +8,7 @@ import logging
 import os
 import io
 import re
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -16,69 +17,69 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-# ---- Flask Setup ----
+
+# Flask
+
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000", "http://localhost:5000", "chrome-extension://*"], supports_credentials=True)
+CORS(app,
+     origins=["http://localhost:3000", "http://localhost:5000", "chrome-extension://*"],
+     supports_credentials=True)
 app.secret_key = os.getenv("FLASK_SECRET_KEY", "supersecret")
 
-# ---- Log Directory Setup ----
-# Use absolute path so log file is always found regardless of cwd
-BASE_DIR = Path(__file__).parent
-log_dir = BASE_DIR / "logs"
-log_dir.mkdir(parents=True, exist_ok=True)
-log_file_path = log_dir / "server.log"
 
-# ---- FIX 1: Use ROOT logger, not app.logger ----
-# app.logger is hijacked by Werkzeug in debug mode and doesn't reliably
-# write to file. Root logger captures ALL log calls including from routes.
+# Logging  (root logger → console + file)
+
+BASE_DIR     = Path(__file__).parent
+LOG_DIR      = BASE_DIR / "logs"
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+LOG_FILE     = LOG_DIR / "server.log"
+
 class FlushFileHandler(logging.FileHandler):
     def emit(self, record):
         super().emit(record)
         self.flush()
 
-log_formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+_fmt = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)
-console_handler.setFormatter(log_formatter)
+_ch = logging.StreamHandler()
+_ch.setLevel(logging.INFO)
+_ch.setFormatter(_fmt)
 
-file_handler = FlushFileHandler(str(log_file_path), encoding="utf-8")
-file_handler.setLevel(logging.INFO)
-file_handler.setFormatter(log_formatter)
+_fh = FlushFileHandler(str(LOG_FILE), encoding="utf-8")
+_fh.setLevel(logging.INFO)
+_fh.setFormatter(_fmt)
 
-# Configure ROOT logger — this is what actually writes to file
-root_logger = logging.getLogger()
-root_logger.setLevel(logging.INFO)
-root_logger.handlers.clear()
-root_logger.addHandler(console_handler)
-root_logger.addHandler(file_handler)
+root = logging.getLogger()
+root.setLevel(logging.INFO)
+root.handlers.clear()
+root.addHandler(_ch)
+root.addHandler(_fh)
 
-# Suppress noisy third-party loggers
-logging.getLogger("elasticsearch").setLevel(logging.WARNING)
-logging.getLogger("urllib3").setLevel(logging.WARNING)
-logging.getLogger("werkzeug").setLevel(logging.WARNING)
+# suppress noisy libs
+for _lib in ("elasticsearch", "urllib3", "werkzeug"):
+    logging.getLogger(_lib).setLevel(logging.WARNING)
 
 logging.info("Starting Alertix SIEM Server")
-logging.info(f"Log file: {log_file_path.resolve()}")
+logging.info(f"Log file: {LOG_FILE.resolve()}")
 
-# ---- Elasticsearch Setup ----
+
+# Elasticsearch
+
 ES_HOST = os.getenv("ELASTICSEARCH_HOST", "127.0.0.1")
 ES_PORT = os.getenv("ELASTICSEARCH_PORT", "9200")
 
 es = None
 try:
     es = Elasticsearch([f"http://{ES_HOST}:{ES_PORT}"], verify_certs=False)
-    es_info = es.info()
-    logging.info(f"Connected to Elasticsearch: {es_info['version']['number']}")
+    logging.info(f"Connected to Elasticsearch: {es.info()['version']['number']}")
 except Exception as e:
-    logging.error(f"Failed to connect to Elasticsearch: {e}")
+    logging.error(f"Elasticsearch connection failed: {e}")
 
 INDEX_NAME = "alertix-logs"
 
-# ---- FIX 2: MongoDB — use 127.0.0.1, not localhost ----
-# On Windows/WSL, "localhost" can resolve to IPv6 ::1 but MongoDB
-# only listens on IPv4 127.0.0.1, causing connection failures in
-# both pymongo and Compass. Always use explicit IPv4.
+
+# MongoDB  (explicit IPv4 to avoid ::1 issue)
+
 MONGO_URI = os.getenv("MONGO_URI", "mongodb://127.0.0.1:27017/")
 MONGO_DB  = os.getenv("MONGO_DB_NAME", "alertix_db")
 
@@ -86,83 +87,189 @@ mongo_client = None
 mongo_logs   = None
 
 try:
-    mongo_client = MongoClient(
-        MONGO_URI,
-        serverSelectionTimeoutMS=5000,
-        connectTimeoutMS=5000,
-        socketTimeoutMS=5000
-    )
+    mongo_client = MongoClient(MONGO_URI,
+                               serverSelectionTimeoutMS=5000,
+                               connectTimeoutMS=5000,
+                               socketTimeoutMS=5000)
     mongo_db   = mongo_client[MONGO_DB]
     mongo_logs = mongo_db["activity_logs"]
     mongo_client.admin.command("ping")
     logging.info(f"Connected to MongoDB: {MONGO_DB}")
 except Exception as e:
-    logging.error(f"Failed to connect to MongoDB: {e}")
+    logging.error(f"MongoDB connection failed: {e}")
     mongo_client = None
     mongo_logs   = None
 
-# ---- Categories ----
-CATEGORIES = {
-    "Entertainment": ["netflix", "youtube", "spotify", "primevideo", "hulu", "twitch"],
-    "Social Media":  ["facebook", "twitter", "instagram", "tiktok", "snapchat", "reddit", "linkedin"],
-    "News":          ["cnn", "bbc", "nytimes", "reuters", "news"],
-    "Work":          ["slack", "github", "gitlab", "zoom", "microsoft teams", "jira", "confluence", "gmail", "outlook"],
-    "Education":     ["khanacademy", "coursera", "edx", "udemy", "academia", "tryhackme"],
-    "Shopping":      ["amazon", "ebay", "flipkart", "etsy", "walmart"],
-    "Gaming":        ["steam", "epicgames", "roblox", "riotgames"],
-    "Finance":       ["paypal", "bank", "finance", "trading", "investment"],
-    "Adult":         ["porn", "xxx", "sex", "adult", "nsfw"],
-    "Other":         []
+
+# Categories  (keyword-based fast path)
+
+CATEGORIES: dict[str, list[str]] = {
+    "Entertainment":  ["netflix", "youtube", "spotify", "primevideo", "hulu", "twitch",
+                       "disneyplus", "hbomax", "peacock", "appletv", "crunchyroll",
+                       "vimeo", "dailymotion", "soundcloud", "pandora", "deezer",
+                       "tidal", "napster", "iheartradio", "tunein"],
+    "Social Media":   ["facebook", "twitter", "instagram", "tiktok", "snapchat",
+                       "reddit", "linkedin", "pinterest", "tumblr", "whatsapp",
+                       "telegram", "discord", "mastodon", "threads", "bluesky",
+                       "clubhouse", "signal", "line", "wechat", "viber"],
+    "News":           ["cnn", "bbc", "nytimes", "reuters", "news", "theguardian",
+                       "washingtonpost", "apnews", "npr", "bloomberg", "forbes",
+                       "techcrunch", "theverge", "arstechnica", "wired", "engadget",
+                       "zdnet", "techradar", "tomsguide", "pcmag"],
+    "Work":           ["slack", "github", "gitlab", "zoom", "microsoft", "teams",
+                       "jira", "confluence", "gmail", "outlook", "notion", "trello",
+                       "asana", "monday", "clickup", "basecamp", "freshdesk",
+                       "zendesk", "salesforce", "hubspot", "dropbox", "box",
+                       "sharepoint", "onedrive", "googledrive", "docs.google",
+                       "sheets.google", "slides.google", "figma", "miro", "linear"],
+    "Education":      ["khanacademy", "coursera", "edx", "udemy", "academia",
+                       "tryhackme", "hackthebox", "leetcode", "hackerrank",
+                       "codeforces", "pluralsight", "skillshare", "lynda",
+                       "duolingo", "brilliant", "wikipedia", "stackoverflow",
+                       "medium", "dev.to", "freecodecamp", "theodinproject",
+                       "mit.edu", "harvard.edu", "stanford.edu", "w3schools",
+                       "mdn", "developer.mozilla"],
+    "Shopping":       ["amazon", "ebay", "flipkart", "etsy", "walmart", "alibaba",
+                       "aliexpress", "target", "bestbuy", "newegg", "costco",
+                       "wayfair", "chewy", "wish", "shein", "zara", "hm.com",
+                       "shopify", "rakuten", "overstock"],
+    "Gaming":         ["steam", "epicgames", "roblox", "riotgames", "battlenet",
+                       "origin", "gog", "itch.io", "gamepass", "xbox", "playstation",
+                       "nintendo", "twitch", "overwolf", "curse", "nexusmods",
+                       "miniclip", "kongregate", "poki", "crazygames"],
+    "Finance":        ["paypal", "bank", "finance", "trading", "investment",
+                       "robinhood", "coinbase", "binance", "kraken", "etrade",
+                       "fidelity", "vanguard", "schwab", "stripe", "wise",
+                       "revolut", "monzo", "sofi", "chime", "mint", "quicken",
+                       "turbotax", "hrblock", "chase", "wellsfargo", "bofa",
+                       "capitalone", "citibank", "barclays", "hsbc"],
+    "Adult":          ["porn", "xxx", "sex", "adult", "nsfw", "onlyfans",
+                       "playboy", "penthouse", "brazzers", "pornhub", "xvideos",
+                       "xnxx", "redtube", "youporn", "xhamster"],
+    "Security":       ["virustotal", "shodan", "exploit-db", "cve", "nvd.nist",
+                       "mitre", "owasp", "sans", "securityfocus", "packetstorm",
+                       "rapid7", "metasploit", "kali", "nmap", "wireshark",
+                       "burpsuite", "maltego", "splunk", "ibm qradar", "paloalto",
+                       "crowdstrike", "sentinelone", "cylance", "carbonblack"],
+    "Cloud":          ["aws", "azure", "gcp", "digitalocean", "heroku", "vercel",
+                       "netlify", "cloudflare", "linode", "vultr", "render",
+                       "railway", "fly.io", "supabase", "firebase"],
+    "Other":          []
 }
 
-PRODUCTIVE_CATEGORIES  = {"Work", "Education"}
+PRODUCTIVE_CATEGORIES  = {"Work", "Education", "Security", "Cloud"}
 DISTRACTIVE_CATEGORIES = {"Entertainment", "Social Media", "Shopping", "Gaming", "Adult"}
 NEUTRAL_CATEGORIES     = {"News", "Finance", "Other"}
 
 SEVERITY_ORDER = ["Low", "Medium", "High", "Critical"]
 
-SEVERITY_KEYWORDS = {
-    "Critical": ["ransomware", "data exfiltration", "rootkit", "privilege escalation", "c2 communication"],
-    "High":     ["malware", "trojan", "botnet", "keylogger", "backdoor", "sql injection", "xss", "rce"],
-    "Medium":   ["failed login", "suspicious", "anomalous", "port scan", "phishing"],
-    "Low":      ["warning", "adware", "spam"]
+SEVERITY_KEYWORDS: dict[str, list[str]] = {
+    "Critical": ["ransomware", "data exfiltration", "rootkit", "privilege escalation",
+                 "c2 communication", "command and control", "zero-day", "0day",
+                 "reverse shell", "bind shell", "lateral movement", "credential dump"],
+    "High":     ["malware", "trojan", "botnet", "keylogger", "backdoor",
+                 "sql injection", "xss", "rce", "remote code execution",
+                 "buffer overflow", "path traversal", "lfi", "rfi", "ssrf",
+                 "idor", "broken auth", "deserialization", "log4j", "shellshock"],
+    "Medium":   ["failed login", "suspicious", "anomalous", "port scan", "phishing",
+                 "brute force", "credential stuffing", "unusual access", "after hours",
+                 "vpn", "tor", "proxy", "unauthorized", "policy violation",
+                 "adult content", "data leak"],
+    "Low":      ["warning", "adware", "spam", "cookie", "tracker",
+                 "slow response", "high cpu", "high memory", "disk full"]
 }
 
 THREAT_TYPES = {
-    "ransomware": ["ransomware", "encryption"],
-    "malware":    ["malware", "virus"],
-    "trojan":     ["trojan", "backdoor"],
-    "phishing":   ["phishing"],
-    "dos":        ["ddos"]
+    "ransomware":        ["ransomware", "encrypt", "decrypt", "ransom"],
+    "malware":           ["malware", "virus", "worm", "spyware", "adware"],
+    "trojan":            ["trojan", "backdoor", "rat ", "remote access"],
+    "phishing":          ["phishing", "credential harvest", "fake login"],
+    "dos":               ["ddos", "dos attack", "flood", "slowloris"],
+    "data_exfiltration": ["exfil", "data theft", "exfiltration", "upload sensitive"],
+    "insider_threat":    ["unauthorized copy", "usb transfer", "after hours", "policy violation"],
+    "none":              []
 }
 
 IOC_PATTERNS = [
-    r"(?:\d{1,3}\.){3}\d{1,3}",
-    r"[0-9a-f]{32,64}",
-    r"(?:http|https)://[^\s]+"
+    r"(?:\d{1,3}\.){3}\d{1,3}",          # IPv4
+    r"[0-9a-f]{32,64}",                    # MD5/SHA hash
+    r"(?:http|https)://[^\s]+",            # URL
+    r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}",  # email
 ]
 
-# ---- Helper Functions ----
-def categorize_log(message):
-    m = message.lower()
-    for category, keywords in CATEGORIES.items():
-        if any(k in m for k in keywords):
-            return category
+# ──────────────────────────────────────────
+# AI-powered smart categorization
+# Uses Claude API as fallback when keyword match fails.
+# This means ANY domain/URL gets categorized intelligently.
+# ──────────────────────────────────────────
+_AI_CACHE: dict[str, str] = {}   # simple in-memory cache
+
+def ai_categorize(message: str) -> str:
+    """
+    Call Claude API to categorize a log message that didn't match any keyword.
+    Returns one of the CATEGORIES keys.
+    Falls back to 'Other' if API is unavailable.
+    """
+    cache_key = message[:120].lower()
+    if cache_key in _AI_CACHE:
+        return _AI_CACHE[cache_key]
+
+    categories_list = ", ".join(k for k in CATEGORIES if k != "Other")
+    prompt = (
+        f"Classify this web activity log into exactly ONE category.\n"
+        f"Categories: {categories_list}, Other\n\n"
+        f"Log: {message[:300]}\n\n"
+        f"Reply with ONLY the category name, nothing else."
+    )
+
+    try:
+        resp = requests.post(
+            "https://api.anthropic.com/v1/messages",
+            headers={"Content-Type": "application/json"},
+            json={
+                "model": "claude-haiku-4-5-20251001",
+                "max_tokens": 20,
+                "messages": [{"role": "user", "content": prompt}]
+            },
+            timeout=5
+        )
+        if resp.status_code == 200:
+            text = resp.json()["content"][0]["text"].strip()
+            # Validate returned category
+            matched = next((c for c in CATEGORIES if c.lower() == text.lower()), "Other")
+            _AI_CACHE[cache_key] = matched
+            return matched
+    except Exception as e:
+        logging.warning(f"AI categorization failed: {e}")
+
     return "Other"
 
-def classify_productivity(category):
+
+def categorize_log(message: str) -> str:
+    """Keyword-first, AI fallback."""
+    m = message.lower()
+    for category, keywords in CATEGORIES.items():
+        if keywords and any(k in m for k in keywords):
+            return category
+    # Nothing matched — ask AI
+    return ai_categorize(message)
+
+
+def classify_productivity(category: str) -> str:
     if category in PRODUCTIVE_CATEGORIES:  return "Productive"
     if category in DISTRACTIVE_CATEGORIES: return "Distractive"
     return "Neutral"
 
-def detect_threat_type(message):
+
+def detect_threat_type(message: str) -> str:
     m = message.lower()
     for ttype, keys in THREAT_TYPES.items():
-        if any(k in m for k in keys):
+        if keys and any(k in m for k in keys):
             return ttype
     return "none"
 
-def score_severity(log_level, message, category):
+
+def score_severity(log_level: str, message: str, category: str) -> str:
     m = message.lower()
     chosen = "Low"
     for level in SEVERITY_ORDER[::-1]:
@@ -177,27 +284,33 @@ def score_severity(log_level, message, category):
     if lvl in ("CRITICAL", "FATAL"):
         chosen = "Critical"
     elif lvl == "ERROR":
-        idx = SEVERITY_ORDER.index(chosen)
-        if idx < SEVERITY_ORDER.index("High"):
+        if SEVERITY_ORDER.index(chosen) < SEVERITY_ORDER.index("High"):
             chosen = "High"
+    # Adult content always at least High
+    if category == "Adult" and SEVERITY_ORDER.index(chosen) < SEVERITY_ORDER.index("High"):
+        chosen = "High"
     return chosen
 
-def utcnow():
+
+def utcnow() -> datetime:
     return datetime.now(timezone.utc)
 
-# ============ ROUTES ============
+
+# Routes
 
 @app.route("/")
 def home():
     return jsonify({
-        "status": "Alertix SIEM Server running",
+        "status":        "Alertix SIEM Server running",
         "elasticsearch": "Connected" if es is not None else "Not Connected",
         "mongodb":       "Connected" if mongo_client is not None else "Not Connected"
     })
 
+
 @app.route("/health")
 def health():
     return jsonify({"status": "healthy"})
+
 
 @app.route("/log", methods=["POST"])
 def receive_log():
@@ -212,36 +325,25 @@ def receive_log():
     severity     = score_severity(log_level, log_message, category)
     now          = utcnow()
 
-    # ---- FIX 3: Two separate dicts ----
-    # MongoDB's insert_one() mutates its dict in-place by injecting
-    # _id: ObjectId(...). If we pass the same dict to ES afterwards,
-    # JSON serialization fails on ObjectId. Keep them separate.
+    # Write to server.log
+    logging.info(
+        f"[{source}] {severity} | {category} | {productivity} | {threat_type} | {log_message}"
+    )
+
+    # Separate dicts: MongoDB mutates by injecting _id (ObjectId) which
+    # breaks Elasticsearch JSON serialization if we reuse the same dict.
     mongo_entry = {
-        "timestamp":    now,              # datetime is fine for MongoDB
-        "source":       source,
-        "log":          log_message,
-        "level":        log_level,
-        "ip":           request.remote_addr,
-        "category":     category,
-        "productivity": productivity,
-        "threat_type":  threat_type,
-        "severity":     severity
+        "timestamp": now,
+        "source": source, "log": log_message, "level": log_level,
+        "ip": request.remote_addr, "category": category,
+        "productivity": productivity, "threat_type": threat_type, "severity": severity
     }
-
     es_entry = {
-        "timestamp":    now.isoformat(),  # ISO string required by ES
-        "source":       source,
-        "log":          log_message,
-        "level":        log_level,
-        "ip":           request.remote_addr,
-        "category":     category,
-        "productivity": productivity,
-        "threat_type":  threat_type,
-        "severity":     severity
+        "timestamp": now.isoformat(),   # ES needs ISO string
+        "source": source, "log": log_message, "level": log_level,
+        "ip": request.remote_addr, "category": category,
+        "productivity": productivity, "threat_type": threat_type, "severity": severity
     }
-
-    # ---- FIX 4: Write to log file via root logger ----
-    logging.info(f"[{source}] {severity} | {category} | {productivity} | {log_message}")
 
     if mongo_logs is not None:
         try:
@@ -257,12 +359,10 @@ def receive_log():
 
     return jsonify({
         "status": "logged",
-        "analysis": {
-            "category":     category,
-            "productivity": productivity,
-            "severity":     severity
-        }
+        "analysis": {"category": category, "productivity": productivity,
+                     "severity": severity, "threat_type": threat_type}
     })
+
 
 @app.route("/stats/summary")
 def stats_summary():
@@ -277,12 +377,15 @@ def stats_summary():
             aggs={
                 "by_productivity": {"terms": {"field": "productivity.keyword"}},
                 "by_category":     {"terms": {"field": "category.keyword"}},
-                "by_severity":     {"terms": {"field": "severity.keyword"}}
+                "by_severity":     {"terms": {"field": "severity.keyword"}},
+                "by_threat":       {"terms": {"field": "threat_type.keyword"}},
+                "by_source":       {"terms": {"field": "source.keyword"}}
             }
         )
         return jsonify({"data": res["aggregations"]})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
 
 @app.route("/stats/productivity")
 def productivity_stats():
@@ -294,6 +397,7 @@ def productivity_stats():
         return jsonify({s["_id"]: s["count"] for s in stats})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
 
 @app.route("/logs/recent")
 def recent_logs():
@@ -307,6 +411,7 @@ def recent_logs():
         return jsonify(logs)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
 
 @app.route("/charts/productivity.png")
 def productivity_pie():
@@ -323,9 +428,11 @@ def productivity_pie():
         labels  = [b["key"] for b in buckets]
         sizes   = [b["doc_count"] for b in buckets]
 
+        colors = {"Productive": "#4CAF50", "Distractive": "#F44336", "Neutral": "#FFC107"}
         fig = plt.figure(figsize=(8, 6))
-        plt.pie(sizes, labels=labels, autopct="%1.1f%%")
-        plt.title("Productivity")
+        plt.pie(sizes, labels=labels, autopct="%1.1f%%",
+                colors=[colors.get(l, "#9E9E9E") for l in labels])
+        plt.title("Productivity Breakdown (Last 24h)")
 
         buf = io.BytesIO()
         fig.savefig(buf, format="png")
@@ -334,6 +441,7 @@ def productivity_pie():
         return send_file(buf, mimetype="image/png")
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
 
 if __name__ == "__main__":
     port = int(os.getenv("SERVER_PORT", 5000))
