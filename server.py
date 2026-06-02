@@ -197,62 +197,15 @@ IOC_PATTERNS = [
     r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}",  # email
 ]
 
-# ──────────────────────────────────────────
-# AI-powered smart categorization
-# Uses Claude API as fallback when keyword match fails.
-# This means ANY domain/URL gets categorized intelligently.
-# ──────────────────────────────────────────
-_AI_CACHE: dict[str, str] = {}   # simple in-memory cache
-
-def ai_categorize(message: str) -> str:
-    """
-    Call Claude API to categorize a log message that didn't match any keyword.
-    Returns one of the CATEGORIES keys.
-    Falls back to 'Other' if API is unavailable.
-    """
-    cache_key = message[:120].lower()
-    if cache_key in _AI_CACHE:
-        return _AI_CACHE[cache_key]
-
-    categories_list = ", ".join(k for k in CATEGORIES if k != "Other")
-    prompt = (
-        f"Classify this web activity log into exactly ONE category.\n"
-        f"Categories: {categories_list}, Other\n\n"
-        f"Log: {message[:300]}\n\n"
-        f"Reply with ONLY the category name, nothing else."
-    )
-
-    try:
-        resp = requests.post(
-            "https://api.anthropic.com/v1/messages",
-            headers={"Content-Type": "application/json"},
-            json={
-                "model": "claude-haiku-4-5-20251001",
-                "max_tokens": 20,
-                "messages": [{"role": "user", "content": prompt}]
-            },
-            timeout=5
-        )
-        if resp.status_code == 200:
-            text = resp.json()["content"][0]["text"].strip()
-            # Validate returned category
-            matched = next((c for c in CATEGORIES if c.lower() == text.lower()), "Other")
-            _AI_CACHE[cache_key] = matched
-            return matched
-    except Exception as e:
-        logging.warning(f"AI categorization failed: {e}")
-
-    return "Other"
-
 
 def categorize_log(message: str) -> str:
-    """Keyword-first, AI fallback."""
+    """Keyword-based categorization."""
     m = message.lower()
     for category, keywords in CATEGORIES.items():
         if keywords and any(k in m for k in keywords):
             return category
-    # Nothing matched — ask AI
-    return ai_categorize(message)
+    # Nothing matched — fallback
+    return "Other"
 
 
 def classify_productivity(category: str) -> str:
