@@ -67,7 +67,7 @@ def log_to_mongodb(entry):
 
 @app.route("/")
 def home():
-    return "✅ SIEM Server is running."
+    return " SIEM Server is running."
 
 @app.route("/log", methods=["POST"])
 def receive_log():
@@ -106,7 +106,7 @@ def view_logs():
 if __name__ == "__main__":
     print("Log file path:", log_file_path.resolve())
     if not os.access(log_file_path, os.W_OK):
-        print("⚠️ Warning: server.log is not writable.")
+        print(" Warning: server.log is not writable.")
     else:
-        print("✅ server.log is writable.")
+        print(" server.log is writable.")
     app.run(debug=True)
