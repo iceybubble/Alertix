@@ -85,11 +85,11 @@ Alertix bridges this gap by offering an open-source, lightweight alternative. It
 
 Exposes a single high-throughput POST endpoint (/log). 
 
-- The server acts as an analysis funnel:Deterministic Categorization: Runs incoming strings against optimized categorical arrays (Work, Education, Security, Cloud, Entertainment, Social Media, Shopping, Gaming, Adult, News, Finance, Other).
+* **The server acts as an analysis funnel**:Deterministic Categorization: Runs incoming strings against optimized categorical arrays (Work, Education, Security, Cloud, Entertainment, Social Media, Shopping, Gaming, Adult, News, Finance, Other).
 
-- Productivity Profiling: Translates active groups into high-level vectors: Productive (engineering, administration, learning), Distractive (non-business vectors), or Neutral.
+* **Productivity Profiling**: Translates active groups into high-level vectors: Productive (engineering, administration, learning), Distractive (non-business vectors), or Neutral.
 
-- Dynamic Severity Calculations: Evaluates payload parameters using an ordered array progression (Low $\rightarrow$ Medium $\rightarrow$ High $\rightarrow$ Critical) using string keywords and Indicators of Compromise (IOC) regular expression logic.
+* **Dynamic Severity Calculations**: Evaluates payload parameters using an ordered array progression (Low $\rightarrow$ Medium $\rightarrow$ High $\rightarrow$ Critical) using string keywords and Indicators of Compromise (IOC) regular expression logic.
 
 ##
 
@@ -109,31 +109,31 @@ Elasticsearch Index Engine: Flattens incoming objects and standardizes timestamp
 
 **✨ Key Features**
 
-Multi-Source Event Ingestion: Captures data simultaneously from web browsers, underlying local files, live network infrastructure interfaces, and system event channels.
+* Multi-Source Event Ingestion: Captures data simultaneously from web browsers, underlying local files, live network infrastructure interfaces, and system event channels.
 
-Keyword Threat Classification: Performs split-second sorting without relying on heavy external runtime dependecies.
+* Keyword Threat Classification: Performs split-second sorting without relying on heavy external runtime dependecies.
 
-Ransomware Burst Tracking: Measures localized rename and delete frequencies per minute to spot file-system locking actions.
+* Ransomware Burst Tracking: Measures localized rename and delete frequencies per minute to spot file-system locking actions.
 
-Process Interception Engine: Scans active process execution blocks for unauthorized network tools (nc, nmap, etc.).
+* Process Interception Engine: Scans active process execution blocks for unauthorized network tools (nc, nmap, etc.).
 
-Kibana Reporting Visualization: Populates charts, event counts over time, and categories inside custom analytical dashboards.
+* Kibana Reporting Visualization: Populates charts, event counts over time, and categories inside custom analytical dashboards.
 
 ##
 
 **🛠️ Tech Stack**
 
-Core Platform Engine: Python 3.x
+* Core Platform Engine: Python 3.x
 
-Asynchronous Web Ingestion Core: Flask + Flask-CORS + Gunicorn
+* Asynchronous Web Ingestion Core: Flask + Flask-CORS + Gunicorn
 
-NoSQL Transactional Layer: MongoDB 6.0
+* NoSQL Transactional Layer: MongoDB 6.0
 
-Data Indexing & Aggregations: Elasticsearch 8.11.1
+* Data Indexing & Aggregations: Elasticsearch 8.11.1
 
-Visualization Interface UI: Kibana 8.11.1
+* Visualization Interface UI: Kibana 8.11.1
 
-Endpoint System Hook Extensions: Watchdog, Psutil, PyWin32 (for Windows environments)
+* Endpoint System Hook Extensions: Watchdog, Psutil, PyWin32 (for Windows environments)
 
 ##
 
@@ -175,7 +175,7 @@ Docker Compose (v2.x or higher)
 
 Python 3.10 / 3.11
 
-Step 1: Clone the Repository
+* Step 1: Clone the Repository
 Open your host machine terminal and check out the code space:
 
 ```
@@ -184,7 +184,7 @@ git clone [https://github.com/iceybubble/Alertix.git](https://github.com/iceybub
 cd Alertix
 ```
 
-Step 2: Establish Your Environment Variables
+* Step 2: Establish Your Environment Variables
 Create a protected .env configuration file in the root of your project folder using our secure template blueprint:
 
 ```
@@ -199,7 +199,7 @@ MONGO_URI=mongodb://mongodb:27017/
 MONGO_DB_NAME=alertix_db
 ```
 
-Step 3: Launch the Containerized Stack
+* Step 3: Launch the Containerized Stack
 Deploy the virtualized backend services simultaneously inside their shared isolated bridge network:
 
 ```
