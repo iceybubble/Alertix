@@ -1,14 +1,15 @@
 # 🚀 Alertix: Advanced SIEM & Real-Time Log Monitoring Ecosystem
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Python Version](https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue)
-![Docker Ingestion](https://img.shields.io/badge/Docker-Containerized-green)
+[![Python Version](https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue)](https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue)
+[![Docker Ingestion](https://img.shields.io/badge/Docker-Containerized-green)](https://img.shields.io/badge/Docker-Containerized-green)
 
 > Transform raw digital noise into actionable security intelligence and productivity insights.
 
 ---
 
 ## 📖 Table of Contents
+
 1. [What is Alertix?](#-what-is-alertix)
 2. [Motivation & Underlying Problem](#-motivation--underlying-problem)
 3. [Core Architecture & Data Flow](#-core-architecture--data-flow)
@@ -16,26 +17,28 @@
 5. [Tech Stack](#-tech-stack)
 6. [Folder Structure](#-folder-structure)
 7. [Installation & Complete Setup Guide](#-installation--complete-setup-guide)
+    * [Method A: Containerized Deployment (Docker)](#method-a-containerized-deployment-docker)
+    * [Method B: Local Native Deployment (Without Docker - macOS & Windows)](#method-b-local-native-deployment-without-docker)
 8. [Generating Logs & Simulating Security Incidents](#-generating-logs--simulating-security-incidents)
 9. [Verifying and Reviewing Data Logs](#-verifying-and-reviewing-data-logs)
 10. [Contributing](#-contributing)
-11. [License & Star History](#-license--star-history)
+11. [License](#-license)
 
 ---
 
 ## 🎯 What is Alertix?
 
 ### In Simple Terms
-**Alertix** is a virtual, real-time guardian for your digital life. It works behind the scenes on your computer and browser to watch your actions, group them into smart categories (like work, study, or entertainment), and immediately catch bad behavior or malicious software. It takes thousands of confusing log lines and turns them into clean, beautiful, interactive charts so you can see exactly where your time goes and stay completely safe online.
+**Alertix** is a virtual, real-time guardian for your digital life. It works behind the scenes on your computer and browser to watch your actions, group them into smart categories (like work, study, or entertainment), and immediately catch bad behavior or malicious software. It takes thousands of confusing log lines and turns them into clean, structured, interactive charts so you can see exactly where your time goes and stay safe online.
 
 ### In Cybersecurity Terms
-**Alertix** is a high-throughput, cross-platform Security Information and Event Management (SIEM) ecosystem. It implements multi-source decentralized instrumentation via custom endpoint agents (tracking asynchronous file-system modifications, processes, socket endpoints, and client-side browser DOM actions). Payloads are forwarded over a localized ingestion pipeline where they are parsed through hardcoded threat signatures, mapped across productivity threat matrixes, dynamically evaluated for risk severity, and stored concurrently using a resilient, dual-database architecture (MongoDB + Elasticsearch) for instant analysis and full-text querying.
+**Alertix** is a high-throughput, cross-platform Security Information and Event Management (SIEM) ecosystem. It implements multi-source decentralized instrumentation via custom endpoint agents (tracking asynchronous file-system modifications, processes, socket endpoints, and client-side browser DOM actions). Payloads are forwarded over a localized ingestion pipeline where they are parsed through threat signatures, mapped across productivity threat matrixes, dynamically evaluated for risk severity, and stored concurrently using a resilient, dual-database architecture (MongoDB + Elasticsearch) for instant analysis and full-text querying.
 
 ---
 
 ## 🛡️ Motivation & Underlying Problem
 
-In today's hyper-connected landscape, professionals, students, and security analysts face an overlapping dual challenge: **the rapid evolution of stealthy cyber threats** and **the compounding friction of digital distractions.** 
+In today's hyper-connected landscape, professionals, students, and security analysts face an overlapping dual challenge: **the rapid evolution of stealthy cyber threats** and **the compounding friction of digital distractions.**
 
 Traditional enterprise SIEM solutions are dense, monolithic configurations designed for massive data-center networks; they lack granular visibility into direct endpoint application usage, time management patterns, or client-side browsing distractions. Conversely, typical productivity applications look at screen-time tracking but completely ignore critical security telemetry—such as localized script drops, mass-encryption hooks, or stealthy command-and-control (C2) beaconing.
 
@@ -52,40 +55,44 @@ Alertix bridges this gap by offering an open-source, lightweight alternative. It
 
 ```plaintext
 +---------------------------------------------------------------------------------+
-|                               DECENTRALIZED AGENTS                              |
+| DECENTRALIZED AGENTS                                                            |
 |                                                                                 |
-|  [Chrome Extension]    [File Access Monitor]    [Network Agent]    [Log Agent]  |
-|   (Browser Activity)      (Watchdog Hooks)      (Psutil Sockets)  (System Logs) |
+| [Chrome Extension] [File Access Monitor] [Network Agent] [Log Agent]            |
+| (Browser Activity) (Watchdog Hooks) (Psutil Sockets) (System Logs)             |
 +---------------------------------------+-----------------------------------------+
                                         |
                                         | Asynchronous HTTPS POST Payloads
                                         v
                         +-------------------------------+
-                        |      FLASK INGESTION HUB      |
+                        |       FLASK INGESTION HUB     |
                         |          (server.py)          |
                         +---------------+---------------+
                                         |
-             +--------------------------+--------------------------+
-             | Parsing Rules, Severity Mapping & Classification   |
-             v                                                     v
-+------------------------+                               +------------------------+
-|  MONGODB DOCUMENT DB   |                               |  ELASTICSEARCH ENGINE  |
-|  (activity_logs BSON)  |                               |  (Flattened JSON Index)|
-+-----------+------------+                               +-----------+------------+
-            |                                                        |
-            v                                                        v
-+------------------------+                               +------------------------+
-| MONGODB COMPASS VIEWER |                               |   KIBANA DASHBOARD     |
-+------------------------+                               +------------------------+
+            +---------------------------+---------------------------+
+            | Parsing Rules, Severity Mapping & Classification      |
+            v                                                       v
++------------------------+                              +------------------------+
+|  MONGODB DOCUMENT DB   |                              |  ELASTICSEARCH ENGINE  |
+| (activity_logs BSON)   |                              | (Flattened JSON Index) |
++-----------+------------+                              +-----------+------------+
+            |                                                       |
+            v                                                       v
++------------------------+                              +------------------------+
+| MONGODB COMPASS VIEWER |                              |    KIBANA DASHBOARD    |
++------------------------+                              +------------------------+
 ```
+
 ##
+
 
 ## 
 **1. Central SIEM Engine (server.py)**
 
 Exposes a single high-throughput POST endpoint (/log). 
 
-* **The server acts as an analysis funnel**:Deterministic Categorization: Runs incoming strings against optimized categorical arrays (Work, Education, Security, Cloud, Entertainment, Social Media, Shopping, Gaming, Adult, News, Finance, Other).
+* **The server acts as an analysis funnel**:
+
+* **Deterministic Categorization**: Runs incoming strings against optimized categorical arrays (Work, Education, Security, Cloud, Entertainment, Social Media, Shopping, Gaming, Adult, News, Finance, Other).
 
 * **Productivity Profiling**: Translates active groups into high-level vectors: Productive (engineering, administration, learning), Distractive (non-business vectors), or Neutral.
 
@@ -99,9 +106,9 @@ Exposes a single high-throughput POST endpoint (/log).
 
 To ensure extreme resilience and eliminate single points of failure, every log payload undergoes an internal duplication path:
 
-MongoDB Store: Maintains transaction-safe BSON trees. It preserves the exact structural integrity of arriving streams and handles quick retrieval tasks for status summaries.
+* **MongoDB Store:** Maintains transaction-safe BSON trees. It preserves the exact structural integrity of arriving streams and handles quick retrieval tasks for status summaries.
 
-Elasticsearch Index Engine: Flattens incoming objects and standardizes timestamps into ISO-8601 strings. This acts as the raw engine fueling complex full-text exploration, regex mapping, and structural analytical dashboards.
+* **Elasticsearch Index Engine:** Flattens incoming objects and standardizes timestamps into ISO-8601 strings. This acts as the raw engine fueling complex full-text exploration, regex mapping, and structural analytical dashboards.
 
 ##
 
@@ -109,31 +116,22 @@ Elasticsearch Index Engine: Flattens incoming objects and standardizes timestamp
 
 **✨ Key Features**
 
-* Multi-Source Event Ingestion: Captures data simultaneously from web browsers, underlying local files, live network infrastructure interfaces, and system event channels.
-
-* Keyword Threat Classification: Performs split-second sorting without relying on heavy external runtime dependecies.
-
-* Ransomware Burst Tracking: Measures localized rename and delete frequencies per minute to spot file-system locking actions.
-
-* Process Interception Engine: Scans active process execution blocks for unauthorized network tools (nc, nmap, etc.).
-
-* Kibana Reporting Visualization: Populates charts, event counts over time, and categories inside custom analytical dashboards.
+* **Multi-Source Event Ingestion:** Captures data simultaneously from web browsers, underlying local files, live network infrastructure interfaces, and system event channels.
+* **Keyword Threat Classification:** Performs split-second sorting without relying on heavy external runtime dependecies.
+* **Ransomware Burst Tracking:** Measures localized rename and delete frequencies per minute to spot file-system locking actions.
+* **Process Interception Engine:** Scans active process execution blocks for unauthorized network tools (nc, nmap, etc.).
+* **Kibana Reporting Visualization:** Populates charts, event counts over time, and categories inside custom analytical dashboards.
 
 ##
 
 **🛠️ Tech Stack**
 
-* Core Platform Engine: Python 3.x
-
-* Asynchronous Web Ingestion Core: Flask + Flask-CORS + Gunicorn
-
-* NoSQL Transactional Layer: MongoDB 6.0
-
-* Data Indexing & Aggregations: Elasticsearch 8.11.1
-
-* Visualization Interface UI: Kibana 8.11.1
-
-* Endpoint System Hook Extensions: Watchdog, Psutil, PyWin32 (for Windows environments)
+* **Core Platform Engine:** Python 3.x
+* **Asynchronous Web Ingestion Core:** Flask + Flask-CORS + Gunicorn
+* **NoSQL Transactional Layer:** MongoDB 6.0
+* **Data Indexing & Aggregations:** Elasticsearch 8.11.1
+* **Visualization Interface UI:** Kibana 8.11.1
+* **Endpoint System Hook Extensions:** Watchdog, Psutil, PyWin32 (for Windows environments)
 
 ##
 
@@ -141,6 +139,7 @@ Elasticsearch Index Engine: Flattens incoming objects and standardizes timestamp
 
 **Folder Structure**
 
+```
 Alertix/
 ├── .vscode/                   # Development environment configurations
 ├── chrome-extension/          # Client browser extension for URL tracking
@@ -158,12 +157,14 @@ Alertix/
 ├── .env.example               # Configuration blueprint template for infrastructure keys
 ├── docker-compose.yml         # Global multi-container deployment architecture
 └── README.md                  # Comprehensive technical documentation
-
+```
 ##
 
 ##
 
 **Installation & Complete Setup Guide**
+
+**METHOD A**
 
 **Prerequisites**
 
@@ -213,9 +214,84 @@ Note on Boot Speeds: Elasticsearch can take up to 2 minutes to initialize comple
 docker-compose logs -f siem-server
 ```
 
+**METHOD B**
+
+If you prefer to run the system natively on your local machine (macOS or Windows), follow these steps to run MongoDB, Elasticsearch, and the Alertix SIEM backend locally.
+
+**Prerequisites (Local Setup):**
+
+* **Python 3.10 / 3.11** installed on your system.
+* **MongoDB Community Edition** running locally. Download and run it via MongoDB Community Server or connect to a free cloud instance on MongoDB Atlas.
+* **Elasticsearch (v8.x)** running locally. Download and run it locally via Elasticsearch Downloads.
+
+**Configure Environment Variables:**
+
+* Create or edit the .env file in your root folder. Change the database hosts from container names to localhost (or your MongoDB Atlas connection string):
+
+```
+# Central Flask Infrastructure Settings
+FLASK_SECRET_KEY=YOUR_FLASK_SECRET
+SERVER_PORT=5000
+
+# Local Native Addresses
+ELASTICSEARCH_HOST=localhost
+ELASTICSEARCH_PORT=9200
+MONGO_URI=mongodb://localhost:27017/
+MONGO_DB_NAME=alertix_db
+```
+
+🍏 **Local Native Setup on macOS**
+
+Navigate to the server directory, create a Python virtual environment, and activate it:
+
+```
+cd siem-log-server
+python3 -m venv venv
+source venv/bin/activate
+```
+
+```
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+Run the parsing hub natively:
+
+```
+python3 server.py
+```
+(The Flask backend is now actively listening on http://localhost:5000)
+
+🪟 **Local Native Setup on Windows**
+
+Navigate to the server directory, create a Python virtual environment, and activate it:
+
+```
+cd siem-log-server
+python -m venv venv
+```
+*  **If using PowerShell:**
+```
+.\venv\Scripts\Activate.ps1
+```
+
+* **If using standard Command Prompt (CMD):**
+
+```
+.\venv\Scripts\activate.bat
+```
+
+```
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+```
+python server.py
+```
+(The Flask backend is now actively listening on http://localhost:5000)
 ---
 
-### Step 4: Configure and Initialize Local Monitoring Agents
+### Step 4: Configure and Initialize Local Monitoring Agents(All Platforms)
 Open a separate, native terminal on the machine you wish to monitor to run the Python agents.
 
 #### 1. Setup & Run the File Access Agent
