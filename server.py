@@ -10,116 +10,130 @@ import io
 import re
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
 
-# ---- chart backend ----
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 # ---- Flask Setup ----
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000", "http://localhost:5000"], supports_credentials=True)
+CORS(app, origins=["http://localhost:3000", "http://localhost:5000", "chrome-extension://*"], supports_credentials=True)
 app.secret_key = os.getenv("FLASK_SECRET_KEY", "supersecret")
 
 # ---- Log Directory Setup ----
-log_dir = Path(__file__).parent / "logs"
+# Use absolute path so log file is always found regardless of cwd
+BASE_DIR = Path(__file__).parent
+log_dir = BASE_DIR / "logs"
 log_dir.mkdir(parents=True, exist_ok=True)
 log_file_path = log_dir / "server.log"
 
-# ---- Custom Logging Handler ----
+# ---- FIX 1: Use ROOT logger, not app.logger ----
+# app.logger is hijacked by Werkzeug in debug mode and doesn't reliably
+# write to file. Root logger captures ALL log calls including from routes.
 class FlushFileHandler(logging.FileHandler):
     def emit(self, record):
         super().emit(record)
         self.flush()
 
 log_formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+
 console_handler = logging.StreamHandler()
 console_handler.setLevel(logging.INFO)
 console_handler.setFormatter(log_formatter)
 
-file_handler = FlushFileHandler(log_file_path, encoding='utf-8')
+file_handler = FlushFileHandler(str(log_file_path), encoding="utf-8")
 file_handler.setLevel(logging.INFO)
 file_handler.setFormatter(log_formatter)
 
-if app.logger.hasHandlers():
-    app.logger.handlers.clear()
-app.logger.addHandler(console_handler)
-app.logger.addHandler(file_handler)
-app.logger.setLevel(logging.INFO)
+# Configure ROOT logger — this is what actually writes to file
+root_logger = logging.getLogger()
+root_logger.setLevel(logging.INFO)
+root_logger.handlers.clear()
+root_logger.addHandler(console_handler)
+root_logger.addHandler(file_handler)
 
-app.logger.info(" Starting Alertix SIEM Server")
-app.logger.info(f" Log file path: {log_file_path.resolve()}")
+# Suppress noisy third-party loggers
+logging.getLogger("elasticsearch").setLevel(logging.WARNING)
+logging.getLogger("urllib3").setLevel(logging.WARNING)
+logging.getLogger("werkzeug").setLevel(logging.WARNING)
+
+logging.info("Starting Alertix SIEM Server")
+logging.info(f"Log file: {log_file_path.resolve()}")
 
 # ---- Elasticsearch Setup ----
-ES_HOST = os.getenv("ELASTICSEARCH_HOST", "localhost")
+ES_HOST = os.getenv("ELASTICSEARCH_HOST", "127.0.0.1")
 ES_PORT = os.getenv("ELASTICSEARCH_PORT", "9200")
 
 es = None
 try:
-    es = Elasticsearch(
-        [f"http://{ES_HOST}:{ES_PORT}"],
-        verify_certs=False
-    )
+    es = Elasticsearch([f"http://{ES_HOST}:{ES_PORT}"], verify_certs=False)
     es_info = es.info()
-    app.logger.info(f" Connected to Elasticsearch: {es_info['version']['number']}")
+    logging.info(f"Connected to Elasticsearch: {es_info['version']['number']}")
 except Exception as e:
-    app.logger.error(f" Failed to connect to Elasticsearch: {e}")
+    logging.error(f"Failed to connect to Elasticsearch: {e}")
 
 INDEX_NAME = "alertix-logs"
 
-# ---- MongoDB Setup ----
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
-MONGO_DB = os.getenv("MONGO_DB_NAME", "alertix_db")
+# ---- FIX 2: MongoDB — use 127.0.0.1, not localhost ----
+# On Windows/WSL, "localhost" can resolve to IPv6 ::1 but MongoDB
+# only listens on IPv4 127.0.0.1, causing connection failures in
+# both pymongo and Compass. Always use explicit IPv4.
+MONGO_URI = os.getenv("MONGO_URI", "mongodb://127.0.0.1:27017/")
+MONGO_DB  = os.getenv("MONGO_DB_NAME", "alertix_db")
 
 mongo_client = None
-mongo_logs = None
+mongo_logs   = None
 
 try:
-    mongo_client = MongoClient(MONGO_URI)
-    mongo_db = mongo_client[MONGO_DB]
+    mongo_client = MongoClient(
+        MONGO_URI,
+        serverSelectionTimeoutMS=5000,
+        connectTimeoutMS=5000,
+        socketTimeoutMS=5000
+    )
+    mongo_db   = mongo_client[MONGO_DB]
     mongo_logs = mongo_db["activity_logs"]
-
-    mongo_client.admin.command('ping')
-    app.logger.info(f" Connected to MongoDB: {MONGO_DB}")
+    mongo_client.admin.command("ping")
+    logging.info(f"Connected to MongoDB: {MONGO_DB}")
 except Exception as e:
-    app.logger.error(f" Failed to connect to MongoDB: {e}")
+    logging.error(f"Failed to connect to MongoDB: {e}")
+    mongo_client = None
+    mongo_logs   = None
 
 # ---- Categories ----
 CATEGORIES = {
     "Entertainment": ["netflix", "youtube", "spotify", "primevideo", "hulu", "twitch"],
-    "Social Media": ["facebook", "twitter", "instagram", "tiktok", "snapchat", "reddit", "linkedin"],
-    "News": ["cnn", "bbc", "nytimes", "reuters", "news"],
-    "Work": ["slack", "github", "gitlab", "zoom", "microsoft teams", "jira", "confluence", "gmail", "outlook"],
-    "Education": ["khanacademy", "coursera", "edx", "udemy", "academia", "tryhackme"],
-    "Shopping": ["amazon", "ebay", "flipkart", "etsy", "walmart"],
-    "Gaming": ["steam", "epicgames", "roblox", "riotgames"],
-    "Finance": ["paypal", "bank", "finance", "trading", "investment"],
-    "Adult": ["porn", "xxx", "sex", "adult", "nsfw"],
-    "Other": []
+    "Social Media":  ["facebook", "twitter", "instagram", "tiktok", "snapchat", "reddit", "linkedin"],
+    "News":          ["cnn", "bbc", "nytimes", "reuters", "news"],
+    "Work":          ["slack", "github", "gitlab", "zoom", "microsoft teams", "jira", "confluence", "gmail", "outlook"],
+    "Education":     ["khanacademy", "coursera", "edx", "udemy", "academia", "tryhackme"],
+    "Shopping":      ["amazon", "ebay", "flipkart", "etsy", "walmart"],
+    "Gaming":        ["steam", "epicgames", "roblox", "riotgames"],
+    "Finance":       ["paypal", "bank", "finance", "trading", "investment"],
+    "Adult":         ["porn", "xxx", "sex", "adult", "nsfw"],
+    "Other":         []
 }
 
-PRODUCTIVE_CATEGORIES = {"Work", "Education"}
+PRODUCTIVE_CATEGORIES  = {"Work", "Education"}
 DISTRACTIVE_CATEGORIES = {"Entertainment", "Social Media", "Shopping", "Gaming", "Adult"}
-NEUTRAL_CATEGORIES = {"News", "Finance", "Other"}
+NEUTRAL_CATEGORIES     = {"News", "Finance", "Other"}
 
-# ---- Severity & Threats ----
 SEVERITY_ORDER = ["Low", "Medium", "High", "Critical"]
 
 SEVERITY_KEYWORDS = {
     "Critical": ["ransomware", "data exfiltration", "rootkit", "privilege escalation", "c2 communication"],
-    "High": ["malware", "trojan", "botnet", "keylogger", "backdoor", "sql injection", "xss", "rce"],
-    "Medium": ["failed login", "suspicious", "anomalous", "port scan", "phishing"],
-    "Low": ["warning", "adware", "spam"]
+    "High":     ["malware", "trojan", "botnet", "keylogger", "backdoor", "sql injection", "xss", "rce"],
+    "Medium":   ["failed login", "suspicious", "anomalous", "port scan", "phishing"],
+    "Low":      ["warning", "adware", "spam"]
 }
 
 THREAT_TYPES = {
     "ransomware": ["ransomware", "encryption"],
-    "malware": ["malware", "virus"],
-    "trojan": ["trojan", "backdoor"],
-    "phishing": ["phishing"],
-    "dos": ["ddos"]
+    "malware":    ["malware", "virus"],
+    "trojan":     ["trojan", "backdoor"],
+    "phishing":   ["phishing"],
+    "dos":        ["ddos"]
 }
 
 IOC_PATTERNS = [
@@ -137,10 +151,8 @@ def categorize_log(message):
     return "Other"
 
 def classify_productivity(category):
-    if category in PRODUCTIVE_CATEGORIES:
-        return "Productive"
-    if category in DISTRACTIVE_CATEGORIES:
-        return "Distractive"
+    if category in PRODUCTIVE_CATEGORIES:  return "Productive"
+    if category in DISTRACTIVE_CATEGORIES: return "Distractive"
     return "Neutral"
 
 def detect_threat_type(message):
@@ -153,17 +165,14 @@ def detect_threat_type(message):
 def score_severity(log_level, message, category):
     m = message.lower()
     chosen = "Low"
-
     for level in SEVERITY_ORDER[::-1]:
         if any(k in m for k in SEVERITY_KEYWORDS[level]):
             chosen = level
             break
-
     if any(re.search(p, m) for p in IOC_PATTERNS):
         idx = SEVERITY_ORDER.index(chosen)
         if idx < SEVERITY_ORDER.index("Medium"):
             chosen = "Medium"
-
     lvl = (log_level or "").upper()
     if lvl in ("CRITICAL", "FATAL"):
         chosen = "Critical"
@@ -171,7 +180,6 @@ def score_severity(log_level, message, category):
         idx = SEVERITY_ORDER.index(chosen)
         if idx < SEVERITY_ORDER.index("High"):
             chosen = "High"
-
     return chosen
 
 def utcnow():
@@ -182,9 +190,9 @@ def utcnow():
 @app.route("/")
 def home():
     return jsonify({
-        "status": " Alertix SIEM Server running",
-        "elasticsearch": " Connected" if es is not None else " Not Connected",
-        "mongodb": " Connected" if mongo_client is not None else " Not Connected"
+        "status": "Alertix SIEM Server running",
+        "elasticsearch": "Connected" if es is not None else "Not Connected",
+        "mongodb":       "Connected" if mongo_client is not None else "Not Connected"
     })
 
 @app.route("/health")
@@ -193,62 +201,66 @@ def health():
 
 @app.route("/log", methods=["POST"])
 def receive_log():
-    data = request.get_json(silent=True) or {}
+    data        = request.get_json(silent=True) or {}
     log_message = data.get("log", "")
-    log_level = data.get("level", "INFO")
-    source = data.get("source", "unknown")
+    log_level   = data.get("level", "INFO")
+    source      = data.get("source", "unknown")
 
-    category = categorize_log(log_message)
+    category     = categorize_log(log_message)
     productivity = classify_productivity(category)
-    threat_type = detect_threat_type(log_message)
-    severity = score_severity(log_level, log_message, category)
+    threat_type  = detect_threat_type(log_message)
+    severity     = score_severity(log_level, log_message, category)
+    now          = utcnow()
 
-    now = utcnow()
-
-    #  ES-safe document: datetime as ISO string, no ObjectId
-    es_entry = {
-        "timestamp": now.isoformat(),        # ISO string, not datetime object
-        "source": source,
-        "log": log_message,
-        "level": log_level,
-        "ip": request.remote_addr,
-        "category": category,
-        "productivity": productivity,
-        "threat_type": threat_type,
-        "severity": severity
-    }
-
-    #  Separate MongoDB document: datetime object is fine for Mongo
+    # ---- FIX 3: Two separate dicts ----
+    # MongoDB's insert_one() mutates its dict in-place by injecting
+    # _id: ObjectId(...). If we pass the same dict to ES afterwards,
+    # JSON serialization fails on ObjectId. Keep them separate.
     mongo_entry = {
-        "timestamp": now,                    # datetime object is fine here
-        "source": source,
-        "log": log_message,
-        "level": log_level,
-        "ip": request.remote_addr,
-        "category": category,
+        "timestamp":    now,              # datetime is fine for MongoDB
+        "source":       source,
+        "log":          log_message,
+        "level":        log_level,
+        "ip":           request.remote_addr,
+        "category":     category,
         "productivity": productivity,
-        "threat_type": threat_type,
-        "severity": severity
+        "threat_type":  threat_type,
+        "severity":     severity
     }
+
+    es_entry = {
+        "timestamp":    now.isoformat(),  # ISO string required by ES
+        "source":       source,
+        "log":          log_message,
+        "level":        log_level,
+        "ip":           request.remote_addr,
+        "category":     category,
+        "productivity": productivity,
+        "threat_type":  threat_type,
+        "severity":     severity
+    }
+
+    # ---- FIX 4: Write to log file via root logger ----
+    logging.info(f"[{source}] {severity} | {category} | {productivity} | {log_message}")
 
     if mongo_logs is not None:
         try:
-            mongo_logs.insert_one(mongo_entry)  # mutates mongo_entry, NOT es_entry
+            mongo_logs.insert_one(mongo_entry)
         except Exception as e:
-            app.logger.error(f"MongoDB error: {e}")
+            logging.error(f"MongoDB error: {e}")
 
     if es is not None:
         try:
-            es.index(index=INDEX_NAME, document=es_entry)  # clean dict, no ObjectId
+            es.index(index=INDEX_NAME, document=es_entry)
         except Exception as e:
-            app.logger.error(f"ES error: {e}")
+            logging.error(f"ES error: {e}")
 
     return jsonify({
         "status": "logged",
         "analysis": {
-            "category": category,
+            "category":     category,
             "productivity": productivity,
-            "severity": severity
+            "severity":     severity
         }
     })
 
@@ -256,9 +268,7 @@ def receive_log():
 def stats_summary():
     if es is None:
         return jsonify({"error": "ES not connected"}), 503
-
     hours = int(request.args.get("hours", 24))
-
     try:
         res = es.search(
             index=INDEX_NAME,
@@ -278,7 +288,6 @@ def stats_summary():
 def productivity_stats():
     if mongo_logs is None:
         return jsonify({"error": "MongoDB not connected"}), 503
-
     try:
         pipeline = [{"$group": {"_id": "$productivity", "count": {"$sum": 1}}}]
         stats = list(mongo_logs.aggregate(pipeline))
@@ -290,11 +299,10 @@ def productivity_stats():
 def recent_logs():
     if mongo_logs is None:
         return jsonify({"error": "MongoDB not connected"}), 503
-
     try:
         logs = list(mongo_logs.find().sort("timestamp", -1).limit(20))
         for log in logs:
-            log["_id"] = str(log["_id"])
+            log["_id"]       = str(log["_id"])
             log["timestamp"] = log["timestamp"].isoformat()
         return jsonify(logs)
     except Exception as e:
@@ -304,7 +312,6 @@ def recent_logs():
 def productivity_pie():
     if es is None:
         return jsonify({"error": "ES not connected"}), 503
-
     try:
         res = es.search(
             index=INDEX_NAME,
@@ -313,8 +320,8 @@ def productivity_pie():
             aggs={"by_productivity": {"terms": {"field": "productivity.keyword"}}}
         )
         buckets = res["aggregations"]["by_productivity"]["buckets"]
-        labels = [b["key"] for b in buckets]
-        sizes = [b["doc_count"] for b in buckets]
+        labels  = [b["key"] for b in buckets]
+        sizes   = [b["doc_count"] for b in buckets]
 
         fig = plt.figure(figsize=(8, 6))
         plt.pie(sizes, labels=labels, autopct="%1.1f%%")
